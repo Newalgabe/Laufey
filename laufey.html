@@ -54,6 +54,7 @@
     --ink:#120a10;
     --cream-rgb:243,232,216;
     --plum-deep-rgb:26,15,23;
+    --plum-rgb:43,26,38;
     --rose-rgb:217,163,172;
     --gold-rgb:198,151,63;
     color-scheme: dark;
@@ -78,7 +79,7 @@
   html::-webkit-scrollbar-track{ background:var(--plum-deep); }
   html::-webkit-scrollbar-thumb{ background:var(--gold); border-radius:10px; }
   html::-webkit-scrollbar-thumb:hover{ background:var(--gold-soft); }
-  body{
+  html, body{
     background:var(--plum-deep);
     color:var(--cream);
     font-family:'Jost', sans-serif;
@@ -302,7 +303,7 @@
   .sec-kicker{ font-size:15px; color:rgba(var(--cream-rgb),0.6); max-width:56ch; margin:-30px 0 50px; font-weight:300; }
 
   /* SETLIST / MUSIC */
-  .setlist{ position:relative; padding:140px 6vw 100px; max-width:1200px; margin:0 auto; }
+  .setlist{ position:relative; padding:140px 6vw 100px; max-width:1200px; margin:0 auto; overflow:hidden; }
   .track{
     display:grid; grid-template-columns: 50px 32px 42px 1fr auto auto; gap:20px; align-items:center;
     padding:16px 10px; border-bottom:1px solid rgba(var(--cream-rgb),0.1);
@@ -353,6 +354,13 @@
     transition: transform 0.35s, border-color 0.35s;
   }
   @media (hover:hover){ .album-card:hover{ transform:translateY(-6px); border-color:rgba(198,151,63,0.4); } }
+  @media (hover:hover){ .mood-btn:hover{ background:rgba(198,151,63,0.2); border-color:var(--gold); transform:translateY(-2px); } }
+  @media (hover:hover){ .quiz-answer-btn:hover{ background:rgba(198,151,63,0.12); border-color:rgba(198,151,63,0.4); } }
+  @media (hover:hover){ .trivia-option:hover:not(.disabled){ background:rgba(198,151,63,0.12); border-color:rgba(198,151,63,0.4); } }
+  @media (hover:hover){ .mood-radio-btn:hover{ background:var(--gold); color:var(--plum-deep); } }
+  @media (hover:hover){ .quiz-restart:hover{ background:var(--gold); color:var(--plum-deep); } }
+  @media (hover:hover){ .trivia-restart:hover{ background:var(--gold); color:var(--plum-deep); } }
+  @media (hover:hover){ .trivia-next:hover{ background:var(--gold-soft); } }
   .album-art{
     width:100%; aspect-ratio:1/1; border-radius:6px; margin-bottom:18px;
     display:flex; align-items:center; justify-content:center;
@@ -479,6 +487,7 @@
     position:fixed; inset:0; z-index:90; background:rgba(10,6,9,0.72); backdrop-filter:blur(4px);
     display:flex; align-items:center; justify-content:center; padding:20px;
     opacity:0; pointer-events:none; transition:opacity 0.3s ease;
+    overflow-y:auto; overflow-x:hidden;
   }
   .track-modal-overlay.open{ opacity:1; pointer-events:auto; }
   .track-modal{
@@ -886,6 +895,14 @@
     .queue-item-title{ font-size:13px; }
     .album-art-title{ font-size:15px; padding:4px 10px; }
     .album-desc{ font-size:13px; }
+    .mood-grid{ gap:8px; }
+    .mood-btn{ padding:14px 10px; }
+    .quiz-card{ padding:14px; }
+    .trivia-card{ padding:14px; }
+    .trivia-lyric{ font-size:15px; padding:14px 0 16px; }
+    .quiz-result-art{ width:90px; height:90px; }
+    .quiz-result-name{ font-size:22px; }
+    .trivia-result b{ font-size:36px; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -980,6 +997,83 @@
     .sec-head{ margin-bottom:24px; }
     .sec-kicker{ font-size:13px; margin-top:0; margin-bottom:24px; }
   }
+
+  /* MOOD RADIO MODAL */
+  .mood-radio-btn{ background:transparent; border:1px solid rgba(198,151,63,0.3); color:var(--gold-soft); padding:10px 18px; border-radius:30px; cursor:pointer; font-size:12px; text-transform:uppercase; letter-spacing:0.1em; transition:all 0.25s; }
+  .mood-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(130px,1fr)); gap:12px; max-width:500px; margin:0 auto; }
+  .mood-btn{ background:rgba(198,151,63,0.08); border:1px solid rgba(198,151,63,0.25); color:var(--cream); padding:20px 14px; border-radius:8px; cursor:pointer; text-align:center; transition:all 0.3s; }
+  .mood-btn .mood-icon{ display:flex; align-items:center; justify-content:center; width:32px; height:32px; margin:0 auto 6px; }
+  .mood-btn .mood-label{ font-size:13px; letter-spacing:0.08em; text-transform:uppercase; font-weight:500; }
+  .mood-btn .mood-count{ font-size:11px; color:rgba(var(--cream-rgb),0.5); margin-top:4px; display:block; }
+  .mood-modal{ text-align:center; max-width:480px; }
+  .mood-modal p{ color:rgba(var(--cream-rgb),0.6); margin-bottom:28px; }
+  .mood-active-tag{ display:inline-block; background:var(--gold); color:var(--plum-deep); padding:4px 14px; border-radius:20px; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; margin-top:16px; }
+
+  /* PERSONALITY QUIZ */
+  .quiz-section{ padding:80px 6vw 100px; max-width:800px; margin:0 auto; }
+  .quiz-card{ background:rgba(var(--plum-rgb),0.5); border:1px solid rgba(198,151,63,0.15); border-radius:12px; padding:36px; }
+  .quiz-progress{ font-size:12px; color:rgba(var(--cream-rgb),0.4); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px; }
+  .quiz-progress-bar{ height:2px; background:rgba(198,151,63,0.15); border-radius:2px; margin-bottom:28px; overflow:hidden; }
+  .quiz-progress-fill{ height:100%; background:var(--gold); border-radius:2px; transition:width 0.5s ease; width:0%; }
+  .quiz-question-text{ font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:500; margin-bottom:24px; color:var(--cream); }
+  .quiz-answers{ display:grid; gap:10px; }
+  .quiz-answer-btn{
+    background:rgba(198,151,63,0.05); border:1px solid rgba(198,151,63,0.2); border-radius:8px;
+    padding:14px 18px; text-align:left; cursor:pointer; color:var(--cream); font-size:15px;
+    transition:all 0.25s; font-family:'Jost',sans-serif;
+  }
+  .quiz-answer-btn.selected{ background:rgba(198,151,63,0.2); border-color:var(--gold); }
+  .quiz-result-card{ text-align:center; padding:20px; }
+  .quiz-result-art{ width:120px; height:120px; border-radius:8px; margin:0 auto 20px; background-size:cover; background-position:center; border:1px solid rgba(var(--cream-rgb),0.15); }
+  .quiz-result-name{ font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--gold-soft); margin-bottom:8px; }
+  .quiz-result-desc{ font-size:14px; color:rgba(var(--cream-rgb),0.6); max-width:400px; margin:0 auto 24px; line-height:1.7; }
+  .quiz-restart{ background:transparent; border:1px solid var(--gold); color:var(--gold-soft); padding:10px 24px; border-radius:30px; cursor:pointer; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; transition:all 0.25s; }
+  .quiz-title{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,4vw,40px); text-align:center; }
+  .quiz-sub{ color:rgba(var(--cream-rgb),0.55); text-align:center; max-width:480px; margin:8px auto 28px; font-size:14px; }
+
+  /* TRIVIA GAME */
+  .trivia-section{ padding:60px 6vw 100px; max-width:700px; margin:0 auto; }
+  .trivia-card{ background:rgba(var(--plum-rgb),0.5); border:1px solid rgba(198,151,63,0.15); border-radius:12px; padding:36px; }
+  .trivia-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+  .trivia-score{ font-size:14px; color:var(--gold-soft); }
+  .trivia-score b{ font-size:20px; }
+  .trivia-round{ font-size:12px; color:rgba(var(--cream-rgb),0.4); text-transform:uppercase; letter-spacing:0.08em; }
+  .trivia-lyric{ font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px; color:var(--cream); text-align:center; padding:24px 0 28px; line-height:1.5; border-bottom:1px solid rgba(198,151,63,0.1); margin-bottom:24px; }
+  .trivia-lyric::before{ content:'\201C'; }
+  .trivia-lyric::after{ content:'\201D'; }
+  .trivia-options{ display:grid; gap:10px; }
+  .trivia-option{
+    background:rgba(198,151,63,0.05); border:1px solid rgba(198,151,63,0.2); border-radius:8px;
+    padding:14px 18px; text-align:left; cursor:pointer; color:var(--cream); font-size:15px;
+    transition:all 0.3s; font-family:'Jost',sans-serif;
+  }
+  .trivia-option.disabled{ cursor:default; opacity:0.7; }
+  .trivia-option.correct{ background:rgba(76,175,80,0.15); border-color:rgba(76,175,80,0.4); color:#81c784; }
+  .trivia-option.wrong{ background:rgba(244,67,54,0.15); border-color:rgba(244,67,54,0.4); color:#e57373; }
+  .trivia-feedback{ text-align:center; padding:16px 0 0; font-size:14px; color:rgba(var(--cream-rgb),0.6); min-height:50px; }
+  .trivia-next{ display:block; margin:16px auto 0; background:var(--gold); color:var(--plum-deep); border:none; padding:10px 28px; border-radius:30px; cursor:pointer; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; transition:all 0.25s; }
+  .trivia-next[hidden]{ display:none; }
+  .trivia-result{ text-align:center; padding:20px; }
+  .trivia-result b{ font-size:48px; font-family:'Cormorant Garamond',serif; color:var(--gold-soft); display:block; margin:10px 0; }
+  .trivia-restart{ background:transparent; border:1px solid var(--gold); color:var(--gold-soft); padding:10px 24px; border-radius:30px; cursor:pointer; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; transition:all 0.25s; margin:20px auto 0; display:inline-block; }
+  .trivia-title{ font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(28px,4vw,40px); text-align:center; }
+  .trivia-sub{ color:rgba(var(--cream-rgb),0.55); text-align:center; max-width:480px; margin:8px auto 28px; font-size:14px; }
+
+  @media (max-width:860px){
+    .quiz-section{ padding:60px 5vw 80px; }
+    .quiz-card{ padding:24px; }
+    .quiz-question-text{ font-size:20px; }
+    .trivia-section{ padding:40px 5vw 80px; }
+    .trivia-card{ padding:24px; }
+    .trivia-lyric{ font-size:19px; padding:18px 0 22px; }
+  }
+  @media (max-width:600px){
+    .mood-grid{ grid-template-columns:repeat(2,1fr); gap:10px; }
+    .quiz-question-text{ font-size:18px; }
+    .quiz-card{ padding:18px; }
+    .trivia-card{ padding:18px; }
+    .trivia-lyric{ font-size:17px; }
+  }
 </style>
 </head>
 <body>
@@ -1043,6 +1137,7 @@
   <div class="setlist-toolbar">
     <button class="play-all-btn" id="playAllBtn"><span class="icon">▶</span> Play all</button>
     <button class="shuffle-btn" id="shuffleBtn"><span class="icon">⇄</span> Shuffle</button>
+    <button class="mood-radio-btn" id="moodRadioBtn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg> Mood radio</button>
     <div class="setlist-search">
       <input type="text" id="trackSearch" placeholder="Filter by title or mood…" aria-label="Filter tracks by title or tag">
     </div>
@@ -1302,6 +1397,34 @@
   </div>
 </section>
 
+<section class="quiz-section reveal" id="quiz">
+  <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Which album are you?</h2><div class="sec-line"></div></div>
+  <p class="quiz-sub">Answer some questions and find out which Laufey album matches your soul.</p>
+  <div class="quiz-card" id="quizCard">
+    <div class="quiz-progress" id="quizProgress">Question <span id="quizQNum">1</span> of <span id="quizTotal">5</span></div>
+    <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+    <div class="quiz-question-text" id="quizQuestion"></div>
+    <div class="quiz-answers" id="quizAnswers"></div>
+    <button class="quiz-restart" id="quizRestart" hidden>Take again</button>
+  </div>
+</section>
+
+<section class="trivia-section reveal" id="trivia">
+  <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Guess the lyric</h2><div class="sec-line"></div></div>
+  <p class="trivia-sub">We show a lyric — you pick which song it's from. How well do you know Laufey?</p>
+  <div class="trivia-card" id="triviaCard">
+    <div class="trivia-header">
+      <span class="trivia-score">Score: <b id="triviaScoreDisplay">0</b></span>
+      <span class="trivia-round" id="triviaRound">1 / 10</span>
+    </div>
+    <div class="trivia-lyric" id="triviaLyric"></div>
+    <div class="trivia-options" id="triviaOptions"></div>
+    <div class="trivia-feedback" id="triviaFeedback"></div>
+    <button class="trivia-next" id="triviaNext">Next →</button>
+    <button class="trivia-restart" id="triviaRestart" hidden>Play again</button>
+  </div>
+</section>
+
 <section class="newsletter reveal">
   <h2>Stay in the loop</h2>
   <p>A little bit of everything, straight to your inbox - new tour dates, unreleased demos, the occasional 2am ramble.</p>
@@ -1413,6 +1536,17 @@
     </div>
     <div class="track-modal-section-label">Tracklist</div>
     <div class="album-modal-tracklist" id="albumModalTracklist"></div>
+  </div>
+</div>
+
+<!-- MOOD RADIO MODAL -->
+<div class="track-modal-overlay" id="moodModalOverlay">
+  <div class="track-modal mood-modal" role="dialog" aria-modal="true" aria-labelledby="moodModalTitle">
+    <button class="track-modal-close" id="moodModalClose" aria-label="Close">✕</button>
+    <div class="track-modal-title" id="moodModalTitle">Mood Radio</div>
+    <p>Pick a mood — we'll filter the setlist and start playing.</p>
+    <div class="mood-grid" id="moodGrid"></div>
+    <div class="mood-active-tag" id="moodActiveTag" hidden></div>
   </div>
 </div>
 
@@ -2397,6 +2531,14 @@
     var trackModalSpotify = document.getElementById('trackModalSpotify');
     var trackModalApple = document.getElementById('trackModalApple');
 
+    function lockBodyScroll(){
+      var anyOpen = (trackModalOverlay && trackModalOverlay.classList.contains('open')) ||
+                    (albumModalOverlay && albumModalOverlay.classList.contains('open')) ||
+                    (moodModalOverlay && moodModalOverlay.classList.contains('open'));
+      document.documentElement.style.overflow = anyOpen ? 'hidden' : '';
+      document.body.style.overflow = anyOpen ? 'hidden' : '';
+    }
+
     function openTrackModal(track){
       trackModalTitle.textContent = trackName(track);
       trackModalAlbum.textContent = trackAlbum(track);
@@ -2414,9 +2556,11 @@
       trackModalSpotify.href = track.getAttribute('data-spotify') || '#';
       trackModalApple.href = track.getAttribute('data-apple') || '#';
       trackModalOverlay.classList.add('open');
+      lockBodyScroll();
     }
     function closeTrackModal(){
       trackModalOverlay.classList.remove('open');
+      lockBodyScroll();
     }
     trackList.forEach(function(track){
       var infoBtn = track.querySelector('.info-btn');
@@ -2490,6 +2634,7 @@
         highlightAlbumModalTrack();
       }
       albumModalOverlay.classList.add('open');
+      lockBodyScroll();
     }
     function highlightAlbumModalTrack(){
       if(!currentTrackEl || !albumModalTracklist) return;
@@ -2506,6 +2651,7 @@
     }
     function closeAlbumModal(){
       albumModalOverlay.classList.remove('open');
+      lockBodyScroll();
     }
     albumCards.forEach(function(card, i){
       card.addEventListener('click', function(){ openAlbumModal(card); });
@@ -2562,8 +2708,363 @@
       if(e.key === 'Escape'){
         closeTrackModal();
         closeAlbumModal();
+        closeMoodModal();
       }
     });
+
+    // ====== MOOD RADIO ======
+    var moodData = [
+      { id:'cozy', label:'Cozy', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 10H7L6 8z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/><path d="M2 12h20"/></svg>', tags:['Ballad','Acoustic'] },
+      { id:'heartbreak', label:'Heartbreak', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>', tags:['Ballad'] },
+      { id:'whimsical', label:'Whimsical', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', tags:['Waltz','Uptempo'] },
+      { id:'rain', label:'Rainy Day', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/><path d="M8 19l1 3"/><path d="M12 19l1 3"/><path d="M16 19l1 3"/></svg>', tags:['Ballad','Strings'] },
+      { id:'late', label:'Late Night', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"/></svg>', tags:['Ballad','Cello / Vocal','Acoustic'] },
+      { id:'bright', label:'Bright', icon:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>', tags:['Uptempo','Strings','Fan favorite'] },
+    ];
+    var moodModalOverlay = document.getElementById('moodModalOverlay');
+    var moodModalClose = document.getElementById('moodModalClose');
+    var moodGrid = document.getElementById('moodGrid');
+    var moodActiveTag = document.getElementById('moodActiveTag');
+    var moodRadioBtn = document.getElementById('moodRadioBtn');
+    function openMoodModal(){
+      moodModalOverlay.classList.add('open');
+      lockBodyScroll();
+      if(!moodGrid.children.length) renderMoods();
+      moodActiveTag.hidden = true;
+    }
+    function closeMoodModal(){ moodModalOverlay.classList.remove('open'); lockBodyScroll(); }
+    function renderMoods(){
+      moodGrid.innerHTML = '';
+      moodData.forEach(function(m){
+        var count = 0;
+        document.querySelectorAll('.track').forEach(function(t){
+          var tag = t.querySelector('.track-tag');
+          if(tag && m.tags.indexOf(tag.textContent.trim()) !== -1) count++;
+        });
+        var btn = document.createElement('button');
+        btn.className = 'mood-btn';
+        btn.innerHTML = '<span class="mood-icon">'+m.icon+'</span><span class="mood-label">'+m.label+'</span><span class="mood-count">'+count+' tracks</span>';
+        btn.addEventListener('click', function(){ selectMood(m); });
+        moodGrid.appendChild(btn);
+      });
+    }
+    function selectMood(mood){
+      closeMoodModal();
+      moodActiveTag.hidden = false;
+      moodActiveTag.textContent = mood.label;
+      // Clear existing filters
+      var searchInput = document.getElementById('trackSearch');
+      if(searchInput) searchInput.value = '';
+      document.querySelectorAll('.tag-filter-pill').forEach(function(p){
+        p.classList.remove('active');
+      });
+      document.querySelectorAll('.track').forEach(function(t){ t.classList.remove('filtered-out'); });
+      // Apply mood filter: show only tracks matching any of the mood's tags
+      document.querySelectorAll('.track').forEach(function(t){
+        var tag = t.querySelector('.track-tag');
+        if(!tag) return;
+        var match = false;
+        mood.tags.forEach(function(tg){
+          if(tag.textContent.trim().toLowerCase().indexOf(tg.toLowerCase()) !== -1) match = true;
+        });
+        if(!match) t.classList.add('filtered-out');
+      });
+      // Auto-play first visible track
+      var first = document.querySelector('.track:not(.filtered-out) .track-play-btn');
+      if(first) first.click();
+    }
+    if(moodRadioBtn) moodRadioBtn.addEventListener('click', openMoodModal);
+    if(moodModalClose) moodModalClose.addEventListener('click', closeMoodModal);
+    if(moodModalOverlay) moodModalOverlay.addEventListener('click', function(e){
+      if(e.target === moodModalOverlay) closeMoodModal();
+    });
+
+    // ====== TOUCH SWIPE GESTURES ======
+    function initSwipe(el, cbs){
+      if(!el) return;
+      var sx, sy, st;
+      el.addEventListener('touchstart', function(e){
+        var t = e.changedTouches[0];
+        sx = t.screenX; sy = t.screenY; st = Date.now();
+      });
+      el.addEventListener('touchend', function(e){
+        var t = e.changedTouches[0];
+        var dx = t.screenX - sx, dy = t.screenY - sy;
+        if(Date.now() - st > 500) return;
+        if(Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50){
+          if(dx > 0 && cbs.right) cbs.right();
+          if(dx < 0 && cbs.left) cbs.left();
+        }
+        if(Math.abs(dy) > Math.abs(dx) && dy > 60 && cbs.down) cbs.down();
+      });
+    }
+    // Swipe mini-player for prev/next
+    initSwipe(document.getElementById('miniPlayer'), {
+      left: function(){
+        var next = document.getElementById('miniPlayerNext');
+        if(next) next.click();
+      },
+      right: function(){
+        var prev = document.getElementById('miniPlayerPrev');
+        if(prev) prev.click();
+      }
+    });
+    // Swipe down on modals to close
+    function addSwipeClose(overlay, closer){
+      initSwipe(overlay && overlay.querySelector('.track-modal'), { down: function(){
+        if(closer) closer.click();
+      }});
+    }
+    addSwipeClose(document.getElementById('trackModalOverlay'), document.getElementById('trackModalClose'));
+    addSwipeClose(document.getElementById('albumModalOverlay'), document.getElementById('albumModalClose'));
+    addSwipeClose(document.getElementById('moodModalOverlay'), document.getElementById('moodModalClose'));
+
+    // ====== OS MEDIA CONTROLS ======
+    if('mediaSession' in navigator){
+      try{
+        navigator.mediaSession.setActionHandler('seekforward', function(){
+          if(currentAudio) currentAudio.currentTime = Math.min(currentAudio.duration, currentAudio.currentTime + 10);
+        });
+        navigator.mediaSession.setActionHandler('seekbackward', function(){
+          if(currentAudio) currentAudio.currentTime = Math.max(0, currentAudio.currentTime - 10);
+        });
+      }catch(e){}
+    }
+
+    // ====== PERSONALITY QUIZ ======
+    var quizData = [
+      {
+        q: 'How would your friends describe you?',
+        a: [
+          { text:'Dreamy and a little mysterious', scores:{'Typical of Me':2,'Bewitched':1} },
+          { text:'Warm, romantic, old soul', scores:{'Everything I Know About Love':3} },
+          { text:'Thoughtful, introspective, poetic', scores:{'Bewitched':2,'Typical of Me':1} },
+          { text:'Playful, upbeat, the life of the party', scores:{'A Matter of Time':3} },
+        ]
+      },
+      {
+        q: 'Pick a date night vibe:',
+        a: [
+          { text:'Cozy night in with candles and wine', scores:{'Everything I Know About Love':3} },
+          { text:'Live jazz at a dimly lit club', scores:{'Bewitched':2,'Typical of Me':1} },
+          { text:'Stargazing on a rooftop', scores:{'Bewitched':2} },
+          { text:'Dancing with friends until 2am', scores:{'A Matter of Time':3} },
+        ]
+      },
+      {
+        q: 'Which season speaks to you most?',
+        a: [
+          { text:'Autumn — crisp air, golden leaves, nostalgia', scores:{'Bewitched':2,'Typical of Me':1} },
+          { text:'Winter — snow, quiet, hot chocolate, wool sweaters', scores:{'A Very Laufey Holiday':3} },
+          { text:'Spring — blooming flowers, gentle rain, new beginnings', scores:{'Everything I Know About Love':2} },
+          { text:'Summer — warm nights, fireflies, road trips', scores:{'A Matter of Time':3} },
+        ]
+      },
+      {
+        q: 'Your ideal creative outlet?',
+        a: [
+          { text:'Writing poetry or letters by hand', scores:{'Bewitched':2,'Typical of Me':1} },
+          { text:'Playing an instrument by the window', scores:{'Everything I Know About Love':2} },
+          { text:'Painting at sunrise with coffee', scores:{'A Very Laufey Holiday':1,'Bewitched':1} },
+          { text:'Dancing in the kitchen while cooking', scores:{'A Matter of Time':3} },
+        ]
+      },
+      {
+        q: 'Finish the sentence: Love is…',
+        a: [
+          { text:'…patient, kind, and a little bit clumsy', scores:{'Everything I Know About Love':3} },
+          { text:'…a beautiful, heartbreaking melody', scores:{'Bewitched':2,'Typical of Me':1} },
+          { text:'…showing up, again and again', scores:{'Bewitched':2} },
+          { text:'…dancing in the moonlight like nobody\'s watching', scores:{'A Matter of Time':3} },
+        ]
+      },
+    ];
+    
+    // Album result data
+    var quizAlbums = [
+      { name:'Typical of Me', art:'https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/500x500-000000-80-0-0.jpg', desc:'You\'re an old soul with a modern heart. Introspective, elegant, and quietly confident — you see beauty in the small, tender moments.' },
+      { name:'Everything I Know About Love', art:'https://cdn-images.dzcdn.net/images/cover/274aa382459107ae1024106e33a10d7a/500x500-000000-80-0-0.jpg', desc:'Romantic and warm-hearted, you believe in love — the real, messy, beautiful kind. You\'re the friend everyone calls for advice.' },
+      { name:'Bewitched', art:'https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/500x500-000000-80-0-0.jpg', desc:'Dreamy, poetic, a little enchanted. You live in your own world and that\'s exactly where you belong. Mysterious and deeply feeling.' },
+      { name:'A Very Laufey Holiday', desc:'Cozy, nostalgic, full of cheer. You cherish tradition, family, and the magic of the holiday season. Your heart is warm year-round.' },
+      { name:'A Matter of Time', art:'https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/500x500-000000-80-0-0.jpg', desc:'Bold, playful, full of energy. You dance through life with joy and spontaneity. Every moment is an adventure waiting to happen.' },
+    ];
+    
+    var quizCard = document.getElementById('quizCard');
+    var quizQNum = document.getElementById('quizQNum');
+    var quizTotal = document.getElementById('quizTotal');
+    var quizProgressFill = document.getElementById('quizProgressFill');
+    var quizQuestion = document.getElementById('quizQuestion');
+    var quizAnswers = document.getElementById('quizAnswers');
+    var quizRestart = document.getElementById('quizRestart');
+    var quizStep = 0;
+    
+    function startQuiz(){
+      quizStep = 0;
+      quizRestart.hidden = true;
+      showQuizQuestion();
+    }
+    function showQuizQuestion(){
+      if(quizStep >= quizData.length){ showQuizResult(); return; }
+      var q = quizData[quizStep];
+      quizQNum.textContent = quizStep + 1;
+      quizTotal.textContent = quizData.length;
+      quizProgressFill.style.width = ((quizStep / quizData.length) * 100) + '%';
+      quizQuestion.textContent = q.q;
+      quizAnswers.innerHTML = '';
+      q.a.forEach(function(ans){
+        var btn = document.createElement('button');
+        btn.className = 'quiz-answer-btn';
+        btn.textContent = ans.text;
+        btn.addEventListener('click', function(){
+          selectQuizAnswer(ans);
+        });
+        quizAnswers.appendChild(btn);
+      });
+    }
+    function selectQuizAnswer(ans){
+      // Store score
+      var scores = JSON.parse(localStorage.getItem('laufey_quiz_scores') || '{}');
+      for(var key in ans.scores){
+        if(ans.scores.hasOwnProperty(key)){
+          scores[key] = (scores[key] || 0) + ans.scores[key];
+        }
+      }
+      localStorage.setItem('laufey_quiz_scores', JSON.stringify(scores));
+      quizStep++;
+      showQuizQuestion();
+    }
+    function showQuizResult(){
+      var scores = JSON.parse(localStorage.getItem('laufey_quiz_scores') || '{}');
+      localStorage.removeItem('laufey_quiz_scores');
+      var maxScore = 0, winner = quizAlbums[1].name;
+      for(var key in scores){
+        if(scores[key] > maxScore){ maxScore = scores[key]; winner = key; }
+      }
+      var album = null;
+      quizAlbums.forEach(function(a){ if(a.name === winner) album = a; });
+      if(!album) album = quizAlbums[1];
+      quizQuestion.textContent = '';
+      quizAnswers.innerHTML = '';
+      quizProgressFill.style.width = '100%';
+      quizRestart.hidden = false;
+      var div = document.createElement('div');
+      div.className = 'quiz-result-card';
+      var artUrl = album.art || 'https://cdn-images.dzcdn.net/images/cover/274aa382459107ae1024106e33a10d7a/500x500-000000-80-0-0.jpg';
+      div.innerHTML = '<div class="quiz-result-art" style="background-image:url(\''+artUrl+'\')"></div><div class="quiz-result-name">'+album.name+'</div><div class="quiz-result-desc">'+album.desc+'</div>';
+      quizAnswers.appendChild(div);
+    }
+    if(quizRestart){
+      quizRestart.addEventListener('click', function(){
+        var existingResult = quizAnswers.querySelector('.quiz-result-card');
+        if(existingResult) existingResult.remove();
+        startQuiz();
+      });
+    }
+    startQuiz();
+
+    // ====== TRIVIA GAME ======
+    var triviaData = [
+      { lyric:'Confess I loved you from the start', options:['From the Start','Valentine','Dreamer','Promise'], correct:0 },
+      { lyric:'Everybody\'s falling in love and I\'m falling behind', options:['Street by Street','Falling Behind','Beautiful Stranger','Let You Break My Heart Again'], correct:1 },
+      { lyric:'I blinked and suddenly I had a Valentine', options:['Valentine','From the Start','Second Best','Love Flew Away'], correct:0 },
+      { lyric:'No boy\'s gonna kill the dreamer in me', options:['Dreamer','Night Light','Haunted','While You Were Sleeping'], correct:0 },
+      { lyric:'It hurts to be something, it\'s worse to be nothing with you', options:['Promise','Falling Behind','Bored','The One That Got Away'], correct:0 },
+      { lyric:'What if I\'m the one that got away?', options:['The One That Got Away','Street by Street','Falling Behind','Dear Soulmate'], correct:0 },
+      { lyric:'I\'ve got a lot of things to figure out', options:['I Wish You Love','Questions for the Universe','Best Friend','Magnolia'], correct:1 },
+      { lyric:'Don\'t you know I\'m not your type?', options:['Let You Break My Heart Again','From the Start','Night Light','Best Friend'], correct:0 },
+      { lyric:'You came to me just like a melody', options:['Bewitched','Falling Behind','Valentine','Love Flew Away'], correct:0 },
+      { lyric:'I\'ll never be the same', options:['Bewitched','Like the Movies','Valentine','Everything I Know About Love'], correct:2 },
+    ];
+    var triviaCard = document.getElementById('triviaCard');
+    var triviaLyric = document.getElementById('triviaLyric');
+    var triviaOptions = document.getElementById('triviaOptions');
+    var triviaScoreDisplay = document.getElementById('triviaScoreDisplay');
+    var triviaRound = document.getElementById('triviaRound');
+    var triviaFeedback = document.getElementById('triviaFeedback');
+    var triviaNext = document.getElementById('triviaNext');
+    var triviaRestart = document.getElementById('triviaRestart');
+    var triviaIndex = 0;
+    var triviaScore = 0;
+    var triviaAnswered = false;
+    
+    function startTrivia(){
+      triviaIndex = 0;
+      triviaScore = 0;
+      triviaAnswered = false;
+      triviaRestart.hidden = true;
+      triviaNext.hidden = true;
+      triviaFeedback.textContent = '';
+      showTriviaQuestion();
+    }
+    function showTriviaQuestion(){
+      if(triviaIndex >= triviaData.length){ showTriviaResult(); return; }
+      var q = triviaData[triviaIndex];
+      triviaLyric.textContent = q.lyric;
+      triviaRound.textContent = (triviaIndex + 1) + ' / ' + triviaData.length;
+      triviaScoreDisplay.textContent = triviaScore;
+      triviaOptions.innerHTML = '';
+      triviaAnswered = false;
+      triviaNext.hidden = true;
+      triviaFeedback.textContent = '';
+      var order = [0,1,2,3];
+      for(var i = order.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+      }
+      order.forEach(function(idx){
+        var btn = document.createElement('button');
+        btn.className = 'trivia-option';
+        btn.textContent = q.options[idx];
+        btn.dataset.idx = idx;
+        btn.addEventListener('click', function(){
+          if(triviaAnswered) return;
+          selectTriviaAnswer(parseInt(btn.dataset.idx));
+        });
+        triviaOptions.appendChild(btn);
+      });
+    }
+    function selectTriviaAnswer(idx){
+      triviaAnswered = true;
+      var q = triviaData[triviaIndex];
+      var allBtns = triviaOptions.querySelectorAll('.trivia-option');
+      allBtns.forEach(function(b){ b.classList.add('disabled'); });
+      if(idx === q.correct){
+        triviaScore++;
+        triviaScoreDisplay.textContent = triviaScore;
+        allBtns[idx].classList.add('correct');
+        triviaFeedback.textContent = '✓ Correct!';
+      } else {
+        allBtns[idx].classList.add('wrong');
+        allBtns[q.correct].classList.add('correct');
+        triviaFeedback.textContent = '✗ Nope! The answer was "' + q.options[q.correct] + '".';
+      }
+      if(triviaIndex < triviaData.length - 1){
+        triviaNext.hidden = false;
+      } else {
+        setTimeout(showTriviaResult, 1200);
+      }
+    }
+    function showTriviaResult(){
+      triviaLyric.textContent = '';
+      triviaOptions.innerHTML = '';
+      triviaFeedback.textContent = '';
+      triviaNext.hidden = true;
+      triviaRestart.hidden = false;
+      var pct = Math.round((triviaScore / triviaData.length) * 100);
+      var msg = pct === 100 ? 'Perfect score — you\'re a true Laufey fan!' : (pct >= 70 ? 'Great job!' : (pct >= 40 ? 'Not bad!' : 'Time for a Laufey listening session!'));
+      var div = document.createElement('div');
+      div.className = 'trivia-result';
+      div.innerHTML = '<span>Your score</span><b>'+triviaScore+'/'+triviaData.length+'</b><span>'+msg+'</span>';
+      triviaOptions.appendChild(div);
+    }
+    if(triviaNext) triviaNext.addEventListener('click', function(){ triviaIndex++; showTriviaQuestion(); });
+    if(triviaRestart) triviaRestart.addEventListener('click', function(){
+      var existingResult = triviaOptions.querySelector('.trivia-result');
+      if(existingResult) existingResult.remove();
+      startTrivia();
+    });
+    startTrivia();
+
   })();
 </script>
 
