@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Laufey</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#2b1a26; --plum-deep:#1a0f17; --cream:#f3e8d8;
+    --rose:#d9a3ac; --gold:#c6973f; --gold-soft:#e0c07a;
+    --rule:rgba(198,151,63,0.22);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 60% 40% at 85% 0%, rgba(217,163,172,0.08), transparent 60%),
+      var(--plum-deep);
+    color:var(--cream);
+    font-family:'Jost',sans-serif; font-weight:300; line-height:1.8;
+  }
+  .wrap{ max-width:760px; margin:0 auto; padding:100px 6vw 120px; }
+  a{ color:var(--gold-soft); }
+  a:hover{ opacity:0.85; }
+  h1{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:clamp(38px,6vw,52px); margin-bottom:8px; }
+  .updated{ color:var(--rose); font-size:13px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:14px; display:block; }
+  .intro{ color:rgba(243,232,216,0.7); font-size:15px; max-width:56ch; margin-bottom:52px; }
+  .back{ display:inline-block; margin-bottom:40px; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; border-bottom:1px solid rgba(198,151,63,0.4); padding-bottom:4px; }
+
+  nav.toc{
+    border:1px solid var(--rule); border-radius:10px; padding:22px 26px; margin-bottom:56px;
+    background:rgba(217,163,172,0.03);
+  }
+  nav.toc span{ font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rose); display:block; margin-bottom:12px; }
+  nav.toc ol{ margin:0; padding-left:20px; columns:2; column-gap:28px; }
+  nav.toc li{ margin-bottom:8px; font-size:14px; }
+  nav.toc a{ text-decoration:none; color:rgba(243,232,216,0.85); border-bottom:1px solid transparent; }
+  nav.toc a:hover{ border-bottom-color:var(--rule); color:var(--gold-soft); }
+
+  section{ padding-top:36px; border-top:1px solid var(--rule); margin-top:36px; }
+  section:first-of-type{ border-top:none; margin-top:0; padding-top:0; }
+  h2{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:26px; margin-bottom:14px; color:var(--gold-soft); }
+  h3{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:19px; margin:22px 0 8px; color:var(--rose); }
+  p{ color:rgba(243,232,216,0.8); margin-bottom:14px; font-size:15.5px; }
+  ul{ margin:0 0 14px 20px; padding:0; }
+  li{ color:rgba(243,232,216,0.8); font-size:15.5px; margin-bottom:8px; }
+  table{ width:100%; border-collapse:collapse; margin:18px 0 24px; font-size:14.5px; }
+  th{ text-align:left; color:var(--gold-soft); font-weight:400; letter-spacing:0.04em; padding:10px 12px; border-bottom:1px solid var(--rule); }
+  td{ padding:10px 12px; border-bottom:1px solid rgba(198,151,63,0.1); color:rgba(243,232,216,0.8); vertical-align:top; }
+  .badge{
+    display:inline-block; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--gold-soft); border:1px solid var(--rule); border-radius:999px; padding:4px 12px; margin-bottom:22px;
+  }
+  .note{
+    border-left:2px solid var(--gold); padding:4px 0 4px 18px; margin:20px 0;
+    color:rgba(243,232,216,0.65); font-size:14px; font-style:italic;
+  }
+  footer.page-end{ margin-top:70px; padding-top:24px; border-top:1px solid var(--rule); font-size:12px; color:rgba(243,232,216,0.4); }
+
+  @media (max-width:600px){
+    nav.toc ol{ columns:1; }
+    table, thead, tbody, th, td, tr{ display:block; }
+    th{ display:none; }
+    td{ border:none; padding:4px 0; }
+    tr{ margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid rgba(198,151,63,0.1); }
+    td:before{ content: attr(data-label); display:block; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--rose); margin-bottom:2px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="laufey.html">← Back to site</a>
+  <span class="badge">Fan-made tribute project</span>
+  <h1>Privacy Policy</h1>
+  <span class="updated">Last updated · July 2026</span>
+  <p class="intro">This site collects as little as possible. Here's exactly what happens when you visit, in plain language.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <span>Contents</span>
+    <ol>
+      <li><a href="#summary">1. The short version</a></li>
+      <li><a href="#collect">2. What we collect</a></li>
+      <li><a href="#storage">3. Local storage &amp; cookies</a></li>
+      <li><a href="#fonts">4. Fonts</a></li>
+      <li><a href="#links">5. Third-party links</a></li>
+      <li><a href="#hosting">6. Hosting &amp; logs</a></li>
+      <li><a href="#children">7. Children's privacy</a></li>
+      <li><a href="#rights">8. Your choices</a></li>
+      <li><a href="#changes">9. Changes to this policy</a></li>
+    </ol>
+  </nav>
+
+  <section id="summary">
+    <h2>1. The short version</h2>
+    <p>No analytics. No ad tracking. No account sign-ups. No data sold or shared for marketing. The only thing stored is a small local flag remembering whether you've dismissed the cookie notice - and that never leaves your browser.</p>
+  </section>
+
+  <section id="collect">
+    <h2>2. What we collect</h2>
+    <p>This site does not use analytics platforms, tracking pixels, advertising cookies, or fingerprinting scripts. No forms on this site collect personal information such as your name, email address, or payment details.</p>
+    <table>
+      <thead><tr><th>Data type</th><th>Collected?</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Data type">Analytics / usage tracking</td><td data-label="Collected?">No</td><td data-label="Notes">No third-party analytics scripts run on this page.</td></tr>
+        <tr><td data-label="Data type">Advertising cookies</td><td data-label="Collected?">No</td><td data-label="Notes">This site doesn't serve ads.</td></tr>
+        <tr><td data-label="Data type">Account or form data</td><td data-label="Collected?">No</td><td data-label="Notes">There's nothing to sign up for.</td></tr>
+        <tr><td data-label="Data type">Cookie-notice preference</td><td data-label="Collected?">Yes</td><td data-label="Notes">Stored locally in your browser only. See below.</td></tr>
+        <tr><td data-label="Data type">Font requests</td><td data-label="Collected?">Indirect</td><td data-label="Notes">Google Fonts sees your IP address when the page loads.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="storage">
+    <h2>3. Local storage &amp; cookies</h2>
+    <p>The only piece of information this site keeps is a preference flag recording whether you accepted or declined the on-page cookie notice. It's stored using your browser's local storage, lives only on your device, and is never transmitted to any server.</p>
+    <div class="note">You can clear this at any time through your browser's site settings - clearing it simply means the notice will appear again on your next visit.</div>
+  </section>
+
+  <section id="fonts">
+    <h2>4. Fonts</h2>
+    <p>Typefaces are loaded from Google Fonts at page load. Requesting them may share your IP address and basic browser details with Google, governed by Google's own privacy policy rather than this one.</p>
+  </section>
+
+  <section id="links">
+    <h2>5. Third-party links</h2>
+    <p>Social and ticketing links on this page point to external platforms (or are placeholders that point nowhere). Once you leave this site, the privacy practices of that destination apply - not this policy.</p>
+  </section>
+
+  <section id="hosting">
+    <h2>6. Hosting &amp; server logs</h2>
+    <p>Like virtually any web server, the infrastructure hosting this page may keep basic technical logs (such as IP address, browser type, and timestamp) for security and reliability purposes. These logs are not used for tracking, profiling, or marketing, and are not shared with third parties.</p>
+  </section>
+
+  <section id="children">
+    <h2>7. Children's privacy</h2>
+    <p>This site does not knowingly collect personal information from anyone, including children. Since no forms or accounts exist here, no personal data is gathered from any visitor regardless of age.</p>
+  </section>
+
+  <section id="rights">
+    <h2>8. Your choices</h2>
+    <ul>
+      <li>Clear your local storage at any time to reset the cookie-notice preference;</li>
+      <li>Use browser extensions or settings to block font requests, if you'd rather not load them from Google;</li>
+      <li>Simply close the tab - nothing here requires an account or ongoing relationship with the site.</li>
+    </ul>
+  </section>
+
+  <section id="changes">
+    <h2>9. Changes to this policy</h2>
+    <p>This policy may be updated as the site evolves. The "last updated" date at the top reflects the most recent revision.</p>
+  </section>
+
+  <footer class="page-end">
+    <p><a href="terms.html">Terms of Use</a> · <a href="laufey.html">Back to site</a></p>
+  </footer>
+</div>
+</body>
+</html>

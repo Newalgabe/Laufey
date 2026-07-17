@@ -1,0 +1,2571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laufey - A Little Bit of Everything</title>
+
+<!-- SEO -->
+<meta name="description" content="A jazz-pop fan tribute to Laufey - music, tour dates, press, and the story behind the velvet-voiced songwriter bringing torch songs back.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1a0f17">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Laufey - A Little Bit of Everything">
+<meta property="og:description" content="A jazz-pop fan tribute to Laufey - music, tour dates, press, and the story behind the velvet-voiced songwriter bringing torch songs back.">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Laufey_performing_at_La_Madeleine_in_Brussels%2C_Belgium_on_February_21st_2024_-_3.jpg/1200px-Laufey_performing_at_La_Madeleine_in_Brussels%2C_Belgium_on_February_21st_2024_-_3.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:site_name" content="Laufey Fan Tribute">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Laufey - A Little Bit of Everything">
+<meta name="twitter:description" content="A jazz-pop fan tribute to Laufey - music, tour dates, press, and the story behind the velvet-voiced songwriter bringing torch songs back.">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Laufey_performing_at_La_Madeleine_in_Brussels%2C_Belgium_on_February_21st_2024_-_3.jpg/1200px-Laufey_performing_at_La_Madeleine_in_Brussels%2C_Belgium_on_February_21st_2024_-_3.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231a0f17'/%3E%3Ccircle cx='50' cy='50' r='40' fill='%232b1a26'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23c6973f'/%3E%3Ccircle cx='50' cy='50' r='4' fill='%231a0f17'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a0f17'/%3E%3Ccircle cx='50' cy='50' r='40' fill='%232b1a26'/%3E%3Ccircle cx='50' cy='50' r='16' fill='%23c6973f'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Laufey",
+  "genre": ["Jazz", "Pop", "Bedroom pop"],
+  "description": "Icelandic-Chinese singer-songwriter blending jazz standards with contemporary pop songwriting.",
+  "url": ""
+}
+</script>
+<style>
+  :root{
+    --plum:#2b1a26;
+    --plum-deep:#1a0f17;
+    --cream:#f3e8d8;
+    --rose:#d9a3ac;
+    --gold:#c6973f;
+    --gold-soft:#e0c07a;
+    --ink:#120a10;
+    --cream-rgb:243,232,216;
+    --plum-deep-rgb:26,15,23;
+    --rose-rgb:217,163,172;
+    --gold-rgb:198,151,63;
+    color-scheme: dark;
+  }
+  html[data-theme="light"]{
+    --plum:#fbf3e6;
+    --plum-deep:#f7ead4;
+    --cream:#2b1a26;
+    --rose:#a8535f;
+    --gold:#a9781f;
+    --gold-soft:#8a6018;
+    --ink:#fffaf0;
+    --cream-rgb:43,26,38;
+    --plum-deep-rgb:247,234,212;
+    --rose-rgb:168,83,95;
+    --gold-rgb:169,120,31;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; scrollbar-width:thin; scrollbar-color:var(--gold) var(--plum-deep);}
+  html::-webkit-scrollbar{ width:8px; }
+  html::-webkit-scrollbar-track{ background:var(--plum-deep); }
+  html::-webkit-scrollbar-thumb{ background:var(--gold); border-radius:10px; }
+  html::-webkit-scrollbar-thumb:hover{ background:var(--gold-soft); }
+  body{
+    background:var(--plum-deep);
+    color:var(--cream);
+    font-family:'Jost', sans-serif;
+    overflow-x:hidden;
+    transition: background 0.5s ease, color 0.5s ease;
+  }
+  nav button{
+    background:none; border:none; color:var(--cream); opacity:0.85; cursor:pointer; padding:0;
+    font:inherit; line-height:inherit; transition: opacity 0.3s, color 0.3s;
+  }
+  nav button:hover, nav button:focus-visible{ opacity:1; color:var(--gold-soft); }
+  .nav-right{ display:flex; align-items:center; }
+  ::selection{background:var(--gold); color:var(--plum-deep);}
+
+  html, nav, .hero, .cookie-banner, .track, .album-card, .about-img-frame, .ticket, .newsletter, footer, .to-top, .press-card, .mini-player, .track-modal, .track-modal-overlay, .album-modal-overlay, .queue-drawer, .queue-drawer-inner, .vinyl, .vinyl-label, .sec-bg-overlay, .album-art, .seek-bar, .volume-bar, .timeline-track, .queue-item{
+    transition-property: background, background-color, border-color, color, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+  }
+
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+    outline: 2px solid var(--gold-soft);
+    outline-offset: 4px;
+    border-radius:2px;
+  }
+
+  .skip-link{
+    position:absolute; top:-60px; left:16px; z-index:100;
+    background:var(--gold-soft); color:var(--plum-deep);
+    padding:12px 20px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
+    text-decoration:none; border-radius:2px; transition: top 0.25s;
+  }
+  .skip-link:focus{ top:16px; }
+
+  .cookie-banner{
+    position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
+    z-index:80; width:min(560px, 92vw);
+    background:var(--plum); border:1px solid rgba(198,151,63,0.35);
+    border-radius:6px; padding:20px 24px;
+    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+  }
+  .cookie-banner p{ font-size:13px; line-height:1.6; color:rgba(var(--cream-rgb),0.8); flex:1; min-width:220px; font-weight:300; }
+  .cookie-banner p a{ color:var(--gold-soft); }
+  .cookie-actions{ display:flex; gap:10px; }
+  .cookie-btn{
+    font-size:12px; letter-spacing:0.08em; text-transform:uppercase; padding:9px 16px;
+    border-radius:2px; cursor:pointer; border:1px solid var(--gold); background:transparent; color:var(--gold-soft);
+    transition:background 0.25s, color 0.25s;
+  }
+  .cookie-btn.primary{ background:var(--gold); color:var(--plum-deep); }
+  .cookie-btn:hover{ background:var(--gold); color:var(--plum-deep); }
+  .cookie-banner[hidden]{ display:none; }
+
+  .staff-bg{
+    position:fixed; inset:0; z-index:0; pointer-events:none; opacity:0.05;
+    background-image:repeating-linear-gradient(to bottom, transparent 0 62px, var(--cream) 62px 63px, transparent 63px 130px);
+  }
+
+  /* NAV */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:26px 6vw;
+    font-family:'Jost', sans-serif;
+    font-size:13px; letter-spacing:0.18em; text-transform:uppercase;
+    transition: background 0.35s, backdrop-filter 0.35s, padding 0.35s, border-color 0.35s;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{
+    background:rgba(var(--plum-deep-rgb),0.82);
+    backdrop-filter:blur(10px);
+    padding:16px 6vw;
+    border-bottom-color:rgba(198,151,63,0.18);
+  }
+  nav .brand{ font-family:'Instrument Serif', serif; font-style:italic; font-size:22px; letter-spacing:0.02em; text-transform:none; color:var(--cream); text-decoration:none;}
+  nav ul{list-style:none; display:flex; gap:34px;}
+  nav a{color:var(--cream); text-decoration:none; opacity:0.85; transition:opacity 0.3s;}
+  nav a:hover, nav a:focus-visible{opacity:1;}
+  nav a[aria-current="page"]{ opacity:1; color:var(--gold-soft); }
+
+  .nav-toggle{
+    display:none; background:none; border:none; cursor:pointer; width:32px; height:22px; position:relative; z-index:60;
+  }
+  .nav-toggle span{
+    position:absolute; left:0; right:0; height:2px; background:var(--cream); border-radius:2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .nav-toggle span:nth-child(1){ top:0; }
+  .nav-toggle span:nth-child(2){ top:10px; }
+  .nav-toggle span:nth-child(3){ top:20px; }
+  .nav-toggle.open span:nth-child(1){ transform:translateY(10px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2){ opacity:0; }
+  .nav-toggle.open span:nth-child(3){ transform:translateY(-10px) rotate(-45deg); }
+
+  section{ position:relative; z-index:1; }
+  .sec-bg-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.12;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    pointer-events: none;
+  }
+
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    padding:120px 6vw 60px;
+    position:relative;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 20%, rgba(217,163,172,0.14), transparent 60%),
+      linear-gradient(180deg, var(--plum) 0%, var(--plum-deep) 100%);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:40px; align-items:center;
+    max-width:1200px; width:100%;
+  }
+  .hero-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:clamp(64px, 9vw, 128px);
+    line-height:0.92;
+    color:var(--cream);
+  }
+  .hero-title em{
+    font-family:'Instrument Serif', serif;
+    font-style:italic;
+    color:var(--gold-soft);
+    display:block;
+  }
+  .hero-sub{
+    margin-top:26px; max-width:420px;
+    font-size:16px; line-height:1.75; color:rgba(var(--cream-rgb),0.75); font-weight:300;
+  }
+  .eyebrow{
+    font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:var(--rose);
+    margin-bottom:18px; display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow::before{content:''; width:34px; height:1px; background:var(--rose); display:inline-block;}
+  .hero-ctas{ display:flex; align-items:center; gap:30px; flex-wrap:wrap; margin-top:38px; }
+  .hero-cta{
+    display:inline-flex; align-items:center; gap:12px;
+    color:var(--gold-soft); text-decoration:none; font-size:13px; letter-spacing:0.16em; text-transform:uppercase;
+    border-bottom:1px solid rgba(198,151,63,0.4); padding-bottom:6px; transition:border-color 0.3s, gap 0.3s;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  .hero-cta:hover{ gap:18px; border-color:var(--gold-soft);}
+  .hero-cta.ghost{ color:rgba(var(--cream-rgb),0.65); border-bottom-color:rgba(var(--cream-rgb),0.25); }
+  .hero-cta.ghost:hover{ border-color:rgba(var(--cream-rgb),0.6); color:var(--cream); }
+
+  .hero-stats{ display:flex; gap:36px; margin-top:52px; flex-wrap:wrap; }
+  .hero-stat b{ display:block; font-family:'Cormorant Garamond', serif; font-weight:500; font-size:30px; color:var(--gold-soft); }
+  .hero-stat span{ font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(var(--cream-rgb),0.55); }
+
+  /* VINYL */
+  .vinyl-wrap{ display:flex; justify-content:center; align-items:center; position:relative; height:420px;}
+  .vinyl{
+    width:340px; height:340px; border-radius:50%;
+    background:
+      repeating-radial-gradient(circle at center, #1c1116 0 2px, #221319 2px 4px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.55), inset 0 0 0 2px rgba(255,255,255,0.03);
+    position:relative;
+    animation: spin 9s linear infinite;
+    animation-play-state:paused;
+  }
+  .vinyl-wrap:hover .vinyl, .vinyl-wrap:focus-within .vinyl, .vinyl-wrap.playing .vinyl{ animation-play-state:running; }
+  .vinyl-label{
+    position:absolute; inset:0; margin:auto; width:130px; height:130px; border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, var(--rose), var(--gold) 70%);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+  }
+  .vinyl-label span{
+    font-family:'Instrument Serif', serif; font-style:italic; font-size:15px; color:var(--plum-deep);
+    line-height:1.2;
+  }
+  .vinyl-label::after{
+    content:''; position:absolute; width:10px; height:10px; border-radius:50%; background:var(--plum-deep);
+  }
+  .tonearm{
+    position:absolute; top:-14px; right:26px; width:14px; height:180px;
+    transform-origin: top center; transform: rotate(-24deg);
+    transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+  }
+  .vinyl-wrap:hover .tonearm, .vinyl-wrap:focus-within .tonearm, .vinyl-wrap.playing .tonearm{ transform: rotate(-2deg); }
+  .now-playing-label{
+    position:absolute; bottom:-6px; left:50%; transform:translateX(-50%);
+    font-family:'Instrument Serif', serif; font-style:italic; font-size:13px; color:var(--rose);
+    opacity:0; transition:opacity 0.4s ease; white-space:nowrap; text-align:center;
+  }
+  .vinyl-wrap.playing .now-playing-label{ opacity:1; }
+  .tonearm::before{
+    content:''; position:absolute; top:0; left:2px; width:10px; height:10px; border-radius:50%; background:var(--gold-soft);
+  }
+  .tonearm::after{
+    content:''; position:absolute; top:6px; left:5px; width:4px; height:170px; background:linear-gradient(var(--gold-soft), rgba(198,151,63,0.2)); border-radius:2px;
+  }
+  @keyframes spin{ to{ transform: rotate(360deg);} }
+
+  /* SECTION HEADERS */
+  .sec-head{ display:flex; align-items:baseline; gap:22px; margin-bottom:54px;}
+  .sec-num{ font-family:'Instrument Serif', serif; font-style:italic; color:var(--rose); font-size:15px;}
+  .sec-title{
+    font-family:'Cormorant Garamond', serif; font-weight:500; font-size:clamp(32px,4vw,52px);
+  }
+  .sec-line{ flex:1; height:1px; background:linear-gradient(to right, rgba(198,151,63,0.5), transparent);}
+  .sec-kicker{ font-size:15px; color:rgba(var(--cream-rgb),0.6); max-width:56ch; margin:-30px 0 50px; font-weight:300; }
+
+  /* SETLIST / MUSIC */
+  .setlist{ position:relative; padding:140px 6vw 100px; max-width:1200px; margin:0 auto; }
+  .track{
+    display:grid; grid-template-columns: 50px 32px 42px 1fr auto auto; gap:20px; align-items:center;
+    padding:16px 10px; border-bottom:1px solid rgba(var(--cream-rgb),0.1);
+    transition: background 0.3s, padding-left 0.3s;
+    cursor:default;
+  }
+  .track:hover{ background:rgba(217,163,172,0.05); padding-left:18px;}
+  .track-num{ font-family:'Instrument Serif', serif; font-style:italic; color:var(--gold); font-size:20px;}
+  .track-cover{
+    width:42px; height:42px; border-radius:4px;
+    background-size: cover; background-position: center;
+    border: 1px solid rgba(var(--cream-rgb),0.15);
+  }
+  .track-name{ font-family:'Cormorant Garamond', serif; font-size:24px; }
+  .track-name small{ display:block; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(var(--cream-rgb),0.5); margin-top:4px; font-weight:300;}
+  .track-album-link{ background:none; border:none; padding:0; margin:0; font:inherit; cursor:pointer; text-align:left; border-bottom:1px solid transparent; }
+  .track-album-link:hover, .track-album-link:focus-visible{ color:var(--gold-soft); border-bottom-color:rgba(198,151,63,0.4); }
+  .track-len{ font-size:13px; color:rgba(var(--cream-rgb),0.55); font-variant-numeric: tabular-nums; }
+  .track-tag{ font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rose); border:1px solid rgba(217,163,172,0.35); padding:5px 12px; border-radius:20px;}
+
+  /* LYRIC PREVIEW DRAWER */
+  .lyric-drawer{
+    max-height:0; overflow:hidden; opacity:0;
+    transition: max-height 0.45s ease, opacity 0.4s ease, padding 0.45s ease, margin 0.45s ease;
+    grid-column: 1 / -1;
+    border-left:2px solid var(--gold);
+    background:rgba(217,163,172,0.05);
+    border-radius:2px;
+  }
+  .track.playing .lyric-drawer{
+    max-height:120px; opacity:1; padding:14px 20px; margin-top:8px;
+  }
+  .lyric-drawer p{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:18px;
+    color:var(--gold-soft); line-height:1.5; margin:0;
+  }
+  .lyric-drawer span{
+    display:block; margin-top:6px; font-family:'Jost', sans-serif; font-style:normal;
+    font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(var(--cream-rgb),0.5);
+  }
+
+  /* ALBUMS */
+  .albums{ padding:40px 6vw 140px; max-width:1200px; margin:0 auto; }
+  .album-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:30px; }
+  .album-card{
+    border:1px solid rgba(var(--cream-rgb),0.12); border-radius:8px; padding:26px;
+    background:linear-gradient(160deg, rgba(217,163,172,0.05), rgba(198,151,63,0.02));
+    transition: transform 0.35s, border-color 0.35s;
+  }
+  @media (hover:hover){ .album-card:hover{ transform:translateY(-6px); border-color:rgba(198,151,63,0.4); } }
+  .album-art{
+    width:100%; aspect-ratio:1/1; border-radius:6px; margin-bottom:18px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Instrument Serif', serif; font-style:italic; font-size:22px; color:var(--plum-deep);
+    text-align:center; padding:20px;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    overflow: hidden;
+  }
+  .album-art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(var(--plum-deep-rgb),0.2);
+    z-index: 1;
+    transition: background 0.3s;
+  }
+  @media (hover:hover){ .album-card:hover .album-art::after {
+    background: rgba(var(--plum-deep-rgb),0.05);
+  } }
+  .album-art-title {
+    position: relative;
+    z-index: 2;
+    background: rgba(var(--cream-rgb),0.9);
+    padding: 6px 14px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  }
+  .album-year{ font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rose); margin-bottom:6px; display:block; }
+  .album-title{ font-family:'Cormorant Garamond', serif; font-size:24px; margin-bottom:8px; }
+  .album-desc{ font-size:14px; color:rgba(var(--cream-rgb),0.6); line-height:1.7; }
+
+  /* PLAY ALL + TRACK ACTIONS */
+  .setlist-toolbar{ display:flex; align-items:center; gap:16px; margin:-30px 0 40px; flex-wrap:wrap; }
+  @media (max-width:600px){
+    .setlist-toolbar{ gap:8px; margin:-20px 0 30px; }
+    .play-all-btn, .shuffle-btn{ padding:8px 14px; font-size:11px; }
+    .shuffle-btn .icon, .play-all-btn .icon{ font-size:12px; }
+  }
+  .play-all-btn{
+    display:inline-flex; align-items:center; gap:10px; background:var(--gold); color:var(--plum-deep);
+    border:none; padding:12px 22px; border-radius:30px; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    cursor:pointer; font-family:'Jost',sans-serif; font-weight:500; transition:background 0.25s, transform 0.25s;
+  }
+  .play-all-btn:hover{ background:var(--gold-soft); transform:translateY(-2px); }
+  .play-all-btn .icon{ font-size:14px; }
+  .shuffle-btn{
+    display:inline-flex; align-items:center; gap:8px; background:transparent; color:var(--gold-soft);
+    border:1px solid rgba(198,151,63,0.3); padding:12px 18px; border-radius:30px; font-size:12px; letter-spacing:0.10em; text-transform:uppercase;
+    cursor:pointer; font-family:'Jost',sans-serif; font-weight:500; transition:background 0.25s, color 0.25s, border-color 0.25s;
+  }
+  .shuffle-btn:hover{ background:rgba(198,151,63,0.1); border-color:var(--gold-soft); }
+  .shuffle-btn.active{ background:var(--gold); color:var(--plum-deep); border-color:var(--gold); }
+  .shuffle-btn .icon{ font-size:14px; }
+  .mini-shuffle-btn.active{ background:var(--gold); color:var(--plum-deep) !important; border-color:var(--gold) !important; }
+
+  .track{ grid-template-columns: 50px 32px 42px 1fr auto auto auto; }
+  .track-actions{ display:flex; align-items:center; gap:6px; }
+  .track-mini-btn{
+    background:transparent; border:1px solid rgba(198,151,63,0.3); color:rgba(var(--cream-rgb),0.65);
+    width:28px; height:28px; border-radius:50%; cursor:pointer; font-size:12px;
+    display:flex; align-items:center; justify-content:center; transition:background 0.25s, color 0.25s, border-color 0.25s;
+  }
+  .track-mini-btn:hover, .track-mini-btn:focus-visible{ background:var(--gold-soft); color:var(--plum-deep); border-color:var(--gold-soft); }
+
+  /* MINI PLAYER / PROGRESS BAR */
+  .mini-player{
+    position:fixed; left:0; right:0; bottom:0; z-index:70;
+    background:rgba(var(--plum-deep-rgb),0.96); backdrop-filter:blur(12px);
+    border-top:1px solid rgba(198,151,63,0.25);
+    padding:12px 6vw; display:flex; align-items:center; gap:18px;
+    transform:translateY(110%); transition:transform 0.4s ease;
+  }
+  .mini-player.show{ transform:translateY(0); }
+  .mini-player-cover{ width:38px; height:38px; border-radius:4px; background-size:cover; background-position:center; flex-shrink:0; border:1px solid rgba(var(--cream-rgb),0.15); }
+  .mini-player-info{ min-width:120px; max-width:220px; }
+  .mini-player-title{ font-family:'Cormorant Garamond', serif; font-size:16px; color:var(--cream); line-height:1.2; }
+  .mini-player-sub{ font-size:11px; color:rgba(var(--cream-rgb),0.5); text-transform:uppercase; letter-spacing:0.08em; }
+  .mini-player-album-link{ background:none; border:none; padding:0; margin:0; font:inherit; cursor:pointer; color:inherit; text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid transparent; }
+  .mini-player-album-link:hover, .mini-player-album-link:focus-visible{ color:var(--gold-soft); border-bottom-color:rgba(198,151,63,0.4); }
+  @media (max-width:700px){
+    .mini-player-album-link{ max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:inline-block; vertical-align:top; }
+  }
+  .mini-player-pos{ font-size:10px; color:var(--gold); letter-spacing:0.05em; margin-top:2px; display:block; }
+  @media (max-width:700px){
+    .mini-player-pos{ display:none; }
+  }
+  .mini-player-btn{
+    background:transparent; border:1px solid rgba(198,151,63,0.35); color:var(--gold-soft);
+    width:34px; height:34px; border-radius:50%; cursor:pointer; font-size:12px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; transition:background 0.25s, color 0.25s;
+  }
+  .mini-player-btn:hover{ background:var(--gold); color:var(--plum-deep); }
+  .seek-wrap{ flex:1; display:flex; align-items:center; gap:10px; min-width:120px; }
+  .seek-time{ font-size:11px; color:rgba(var(--cream-rgb),0.55); font-variant-numeric:tabular-nums; width:34px; }
+  .seek-bar{
+    flex:1; -webkit-appearance:none; appearance:none; height:4px; border-radius:2px;
+    background:rgba(var(--cream-rgb),0.18); cursor:pointer; outline:none;
+  }
+  .seek-bar::-webkit-slider-thumb{ -webkit-appearance:none; width:12px; height:12px; border-radius:50%; background:var(--gold-soft); cursor:pointer; }
+  .seek-bar::-moz-range-thumb{ width:12px; height:12px; border-radius:50%; background:var(--gold-soft); border:none; cursor:pointer; }
+  .mini-player-close{ background:none; border:none; color:rgba(var(--cream-rgb),0.4); cursor:pointer; font-size:16px; flex-shrink:0; }
+  @media (max-width:700px){
+    .mini-player-info{ min-width:0; max-width:120px; }
+    .mini-player-title{ font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .mini-player-sub{ font-size:9px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .mini-player-btn{ width:30px; height:30px; font-size:11px; }
+    .mini-player{ padding:10px 4vw; gap:10px; }
+    .seek-wrap{ min-width:80px; gap:6px; }
+    .seek-time{ width:28px; font-size:10px; }
+  }
+  @media (max-width:600px){
+    .mini-player-info{ max-width:none; flex:1; min-width:0; }
+    .mini-player-title{ font-size:13px; }
+    .mini-player-sub{ font-size:8px; }
+    .mini-player-btn{ width:36px; height:36px; font-size:14px; }
+    .mini-player{ padding:10px 4vw; gap:10px; }
+    .mini-shuffle-btn, .volume-wrap, .mini-player-queue-btn, .mini-player-close, #miniPlayerPrev, #miniPlayerNext, .seek-wrap{ display:none; }
+  }
+
+  /* TRACK MODAL (lyrics + credits) */
+  .track-modal-overlay{
+    position:fixed; inset:0; z-index:90; background:rgba(10,6,9,0.72); backdrop-filter:blur(4px);
+    display:flex; align-items:center; justify-content:center; padding:20px;
+    opacity:0; pointer-events:none; transition:opacity 0.3s ease;
+  }
+  .track-modal-overlay.open{ opacity:1; pointer-events:auto; }
+  .track-modal{
+    background:var(--plum); border:1px solid rgba(198,151,63,0.3); border-radius:12px;
+    max-width:480px; width:100%; padding:36px; position:relative;
+    transform:translateY(16px); transition:transform 0.3s ease; box-shadow:0 30px 70px rgba(0,0,0,0.5);
+  }
+  .track-modal-overlay.open .track-modal{ transform:translateY(0); }
+  .track-modal-close{
+    position:absolute; top:18px; right:18px; background:none; border:none; color:rgba(var(--cream-rgb),0.5);
+    font-size:20px; cursor:pointer; line-height:1;
+  }
+  .track-modal-close:hover{ color:var(--gold-soft); }
+  .track-modal-title{ font-family:'Cormorant Garamond', serif; font-size:28px; color:var(--cream); margin-bottom:4px; }
+  .track-modal-album{ font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--rose); margin-bottom:24px; }
+  .track-modal-lyric{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:22px; color:var(--gold-soft);
+    line-height:1.5; border-left:2px solid var(--gold); padding-left:18px; margin-bottom:10px;
+    max-height:280px; overflow-y:auto; white-space:pre-line;
+    scrollbar-width:thin; scrollbar-color:var(--gold) rgba(var(--cream-rgb),0.08);
+  }
+  .track-modal-lyric::-webkit-scrollbar{ width:6px; }
+  .track-modal-lyric::-webkit-scrollbar-track{
+    background:rgba(var(--cream-rgb),0.08); border-radius:10px;
+  }
+  .track-modal-lyric::-webkit-scrollbar-thumb{
+    background:var(--gold); border-radius:10px;
+    transition: background 0.25s;
+  }
+  .track-modal-lyric::-webkit-scrollbar-thumb:hover{ background:var(--gold-soft); }
+  .track-modal-note{ font-size:12px; color:rgba(var(--cream-rgb),0.45); margin-bottom:26px; line-height:1.6; }
+  .track-modal-note a{ color:var(--gold-soft); }
+  .track-modal-section-label{ font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rose); margin-bottom:8px; }
+  .track-modal-credits{ font-size:14.5px; color:rgba(var(--cream-rgb),0.8); line-height:1.8; margin-bottom:26px; }
+  .track-modal-credits b{ color:var(--cream); font-weight:500; }
+  .track-modal-streams{ display:flex; gap:12px; flex-wrap:wrap; }
+  .stream-link{
+    display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border:1px solid var(--gold);
+    border-radius:20px; color:var(--gold-soft); text-decoration:none; font-size:12px; letter-spacing:0.06em;
+    transition:background 0.25s, color 0.25s;
+  }
+  .stream-link:hover{ background:var(--gold); color:var(--plum-deep); }
+
+  /* DISCOGRAPHY TIMELINE */
+  .timeline{ position:relative; margin:0 0 70px; padding-left:0; }
+  .timeline-track{
+    position:relative; display:flex; gap:0; overflow-x:auto; padding:30px 4px 24px;
+    scrollbar-width:thin; scrollbar-color:var(--gold) rgba(var(--cream-rgb),0.08);
+  }
+  .timeline-track::-webkit-scrollbar{ height:6px; }
+  .timeline-track::-webkit-scrollbar-track{
+    background:rgba(var(--cream-rgb),0.08); border-radius:10px;
+  }
+  .timeline-track::-webkit-scrollbar-thumb{
+    background:var(--gold); border-radius:10px;
+    transition: background 0.25s;
+  }
+  .timeline-track::-webkit-scrollbar-thumb:hover{ background:var(--gold-soft); }
+  .timeline-track::before{
+    content:''; position:absolute; left:0; right:0; top:50%; height:1px; background:rgba(198,151,63,0.3);
+  }
+  .timeline-item{ flex:0 0 auto; width:190px; position:relative; text-align:center; padding:0 14px; }
+  .timeline-dot{
+    width:12px; height:12px; border-radius:50%; background:var(--gold-soft); margin:0 auto 14px;
+    position:relative; z-index:2; box-shadow:0 0 0 4px var(--plum-deep);
+  }
+  .timeline-year{ font-family:'Cormorant Garamond', serif; font-size:22px; color:var(--gold-soft); }
+  .timeline-title{ font-size:12.5px; color:rgba(var(--cream-rgb),0.75); margin-top:4px; line-height:1.4; }
+
+  /* SEARCH / FILTER */
+  .setlist-search{
+    flex:1; min-width:180px; max-width:280px; position:relative;
+  }
+  .setlist-search input{
+    width:100%; background:rgba(var(--cream-rgb),0.05); border:1px solid rgba(198,151,63,0.25);
+    border-radius:20px; padding:10px 16px 10px 34px; color:var(--cream); font-family:'Jost',sans-serif;
+    font-size:13px; font-weight:300; outline:none; transition:border-color 0.25s, background 0.25s;
+  }
+  .setlist-search input::placeholder{ color:rgba(var(--cream-rgb),0.4); }
+  .setlist-search input:focus{ border-color:var(--gold); background:rgba(var(--cream-rgb),0.08); }
+  .setlist-search::before{
+    content:'⚲'; position:absolute; left:14px; top:50%; transform:translateY(-50%) scaleX(-1);
+    color:rgba(var(--cream-rgb),0.4); font-size:13px; pointer-events:none;
+  }
+  .track.filtered-out{ display:none; }
+  .setlist-empty{ display:none; padding:30px 10px; text-align:center; color:rgba(var(--cream-rgb),0.5); font-size:14px; font-style:italic; font-family:'Cormorant Garamond', serif; }
+  .setlist-empty.show{ display:block; }
+
+  /* MOOD / TAG FILTER PILLS */
+  .tag-filters{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 34px; }
+  .tag-pill{
+    font-family:'Jost', sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+    color:rgba(var(--cream-rgb),0.65); background:rgba(var(--cream-rgb),0.04);
+    border:1px solid rgba(198,151,63,0.25); border-radius:20px; padding:7px 14px;
+    cursor:pointer; transition:background 0.25s, border-color 0.25s, color 0.25s, transform 0.2s;
+  }
+  .tag-pill:hover{ border-color:rgba(198,151,63,0.5); color:var(--cream); }
+  .tag-pill.active{ background:var(--gold); border-color:var(--gold); color:var(--plum-deep); font-weight:400; }
+  .tag-pill.active:hover{ transform:translateY(-1px); }
+
+  /* QUEUE */
+  .track-actions{ gap:4px; }
+  .queue-btn.added{ background:var(--gold-soft); color:var(--plum-deep); border-color:var(--gold-soft); }
+  .mini-player-queue-btn{ position:relative; }
+  .queue-badge{
+    position:absolute; top:-4px; right:-4px; background:var(--gold); color:var(--plum-deep);
+    font-size:9px; font-weight:600; width:15px; height:15px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; line-height:1;
+  }
+  .queue-drawer{
+    position:fixed; left:0; right:0; bottom:0; z-index:69;
+    background:rgba(var(--plum-deep-rgb),0.98); backdrop-filter:blur(12px);
+    border-top:1px solid rgba(198,151,63,0.25);
+    max-height:0; overflow:hidden; transition:max-height 0.35s ease;
+  }
+  .queue-drawer.open{ max-height:280px; overflow-y:auto; }
+  .queue-drawer-inner{ padding:18px 6vw; }
+  .queue-drawer-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+  .queue-drawer-head span{ font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rose); }
+  .queue-clear-btn{ background:none; border:none; color:rgba(var(--cream-rgb),0.45); font-size:12px; cursor:pointer; text-decoration:underline; }
+  .queue-clear-btn:hover{ color:var(--gold-soft); }
+  .queue-item{
+    display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid rgba(var(--cream-rgb),0.08);
+    cursor:pointer; transition:background 0.2s;
+  }
+  .queue-item:hover .queue-item-title{ color:var(--gold-soft); }
+  .queue-item.dragging{ opacity:0.4; }
+  .queue-item.drag-over{ background:rgba(198,151,63,0.08); }
+  .queue-drag-handle{ color:rgba(var(--cream-rgb),0.25); font-size:14px; cursor:grab; flex-shrink:0; user-select:none; }
+  .queue-drag-handle:hover{ color:rgba(var(--cream-rgb),0.5); }
+  .queue-item-cover{ width:30px; height:30px; border-radius:4px; background-size:cover; background-position:center; flex-shrink:0; }
+  .queue-item-title{ font-family:'Cormorant Garamond', serif; font-size:15px; color:var(--cream); transition:color 0.2s; flex:1; }
+  .queue-item-sub{ font-size:10px; color:rgba(var(--cream-rgb),0.45); text-transform:uppercase; letter-spacing:0.06em; }
+  .queue-item-remove{ background:none; border:none; color:rgba(var(--cream-rgb),0.35); font-size:14px; cursor:pointer; flex-shrink:0; }
+  .queue-item-remove:hover{ color:var(--rose); }
+  .queue-empty-note{ font-size:13px; color:rgba(var(--cream-rgb),0.4); font-style:italic; font-family:'Cormorant Garamond', serif; padding:10px 0; }
+
+  /* VOLUME */
+  .volume-wrap{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
+  .volume-icon{ font-size:14px; color:rgba(var(--cream-rgb),0.55); width:16px; text-align:center; }
+  .volume-bar{
+    width:70px; -webkit-appearance:none; appearance:none; height:4px; border-radius:2px;
+    background:rgba(var(--cream-rgb),0.18); cursor:pointer; outline:none;
+  }
+  .volume-bar::-webkit-slider-thumb{ -webkit-appearance:none; width:11px; height:11px; border-radius:50%; background:var(--gold-soft); cursor:pointer; }
+  .volume-bar::-moz-range-thumb{ width:11px; height:11px; border-radius:50%; background:var(--gold-soft); border:none; cursor:pointer; }
+  @media (max-width:900px){ .volume-bar{ width:50px; } .volume-wrap{ gap:5px; } }
+  @media (max-width:600px){ .volume-bar{ width:36px; } .volume-icon{ font-size:12px; width:14px; } }
+
+  /* ALBUM MODAL */
+  .album-card{ cursor:pointer; }
+  .album-modal{ max-width:520px; }
+  .album-modal-header{ display:flex; gap:20px; margin-bottom:24px; }
+  .album-modal-art{ width:96px; height:96px; border-radius:6px; background-size:cover; background-position:center; flex-shrink:0; border:1px solid rgba(var(--cream-rgb),0.15); }
+  .album-modal-meta .track-modal-album{ margin-bottom:6px; }
+  .album-modal-tracklist{ display:flex; flex-direction:column; gap:2px; max-height:280px; overflow-y:auto; scrollbar-width:thin; scrollbar-color:var(--gold) rgba(var(--cream-rgb),0.08); }
+  .album-modal-tracklist::-webkit-scrollbar{ width:6px; }
+  .album-modal-tracklist::-webkit-scrollbar-track{ background:rgba(var(--cream-rgb),0.08); border-radius:10px; }
+  .album-modal-tracklist::-webkit-scrollbar-thumb{ background:var(--gold); border-radius:10px; transition: background 0.25s; }
+  .album-modal-tracklist::-webkit-scrollbar-thumb:hover{ background:var(--gold-soft); }
+  .album-modal-track{
+    display:flex; align-items:center; gap:14px; padding:10px 8px; border-radius:6px; cursor:pointer;
+    transition:background 0.2s;
+  }
+  .album-modal-track.playable:hover{ background:rgba(217,163,172,0.08); }
+  .album-modal-track.currently-playing{ background:rgba(198,151,63,0.1); }
+  .album-modal-track.currently-playing .album-modal-track-name{ color:var(--gold-soft); }
+  .album-modal-track.unavailable{ opacity:0.45; cursor:default; }
+  .album-modal-track.unavailable .album-modal-track-name{ color:rgba(var(--cream-rgb),0.55); }
+  .album-modal-track-num{ font-family:'Cormorant Garamond', serif; color:var(--gold); font-size:15px; width:20px; }
+  .album-modal-track-name{ font-family:'Cormorant Garamond', serif; font-size:17px; color:var(--cream); flex:1; }
+  .album-modal-track-len{ font-size:12px; color:rgba(var(--cream-rgb),0.5); }
+  .album-modal-play{
+    background:transparent; border:1px solid rgba(198,151,63,0.35); color:var(--gold-soft);
+    width:26px; height:26px; border-radius:50%; font-size:10px; cursor:pointer; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; transition:background 0.2s, color 0.2s;
+  }
+  .album-modal-track.playable:hover .album-modal-play{ background:var(--gold-soft); color:var(--plum-deep); border-color:var(--gold-soft); }
+
+  /* AUDIO CONTROLS & PLAYER */
+  .track-play-btn {
+    background: transparent;
+    border: 1px solid rgba(198,151,63,0.35);
+    color: var(--gold-soft);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
+    outline: none;
+  }
+  .track-play-btn:hover, .track-play-btn:focus-visible {
+    background: var(--gold);
+    color: var(--plum-deep);
+    border-color: var(--gold);
+  }
+  .track.playing {
+    background: rgba(217,163,172,0.08);
+    border-left: 2px solid var(--gold);
+    padding-left: 18px;
+  }
+  .track.playing .track-play-btn {
+    background: var(--gold-soft);
+    color: var(--plum-deep);
+    border-color: var(--gold-soft);
+  }
+
+  /* PHOTO GALLERY HERO STYLING */
+  .hero-photo-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.15;
+    background-size: cover;
+    background-position: center 30%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+  }
+
+  /* ABOUT / BIO SPLIT */
+  .about{ padding:100px 6vw 140px; max-width:1200px; margin:0 auto; display:grid; grid-template-columns: 1fr 1.1fr; gap:60px; align-items:start;}
+  .about-left-sticky {
+    position: sticky;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-img-frame {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(198,151,63,0.22);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    background-size: cover;
+    background-position: center;
+  }
+  .about-quote{
+    font-family:'Instrument Serif', serif; font-style:italic; font-size:clamp(24px,2.5vw,34px);
+    line-height:1.35; color:var(--gold-soft);
+  }
+  .about-quote::before{ content:'\201C'; color:var(--rose); font-size:60px; display:block; line-height:0.5; margin-bottom:10px;}
+  .about-body p{ font-size:16px; line-height:1.9; color:rgba(var(--cream-rgb),0.78); font-weight:300; margin-bottom:22px; max-width:560px;}
+  .about-body strong{ color:var(--cream); font-weight:500;}
+  .about-facts{ display:flex; gap:40px; margin-top:36px; flex-wrap:wrap; }
+  .about-facts div{ font-size:13px; }
+  .about-facts b{ display:block; font-family:'Cormorant Garamond', serif; font-size:19px; color:var(--gold-soft); font-weight:500; margin-bottom:2px; }
+  .about-facts span{ color:rgba(var(--cream-rgb),0.55); letter-spacing:0.06em; text-transform:uppercase; font-size:11px; }
+
+  /* PRESS */
+  .press{ padding:40px 6vw 140px; max-width:1200px; margin:0 auto; }
+  .press-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:30px; }
+  .press-card{
+    border-left:2px solid var(--gold); padding:6px 0 6px 24px;
+  }
+  .press-quote{ font-family:'Cormorant Garamond', serif; font-size:20px; line-height:1.55; color:var(--cream); margin-bottom:14px; }
+  .press-source{ font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); }
+
+  /* TOUR / TICKETS */
+  .tour{ padding:100px 6vw 160px; max-width:1200px; margin:0 auto; }
+  .ticket-list{ display:flex; flex-direction:column; gap:16px; }
+  .ticket{
+    display:grid; grid-template-columns: 110px 1fr auto 130px; align-items:center; gap:28px;
+    background:linear-gradient(90deg, rgba(217,163,172,0.06), rgba(198,151,63,0.03));
+    border:1px solid rgba(var(--cream-rgb),0.12);
+    border-radius:4px; padding:24px 28px; position:relative;
+  }
+  .ticket::before, .ticket::after{
+    content:''; position:absolute; top:50%; width:22px; height:22px; background:var(--plum-deep);
+    border-radius:50%; transform:translateY(-50%);
+  }
+  .ticket::before{ left:-11px; }
+  .ticket::after{ right:-11px; }
+  .ticket-date{ font-family:'Cormorant Garamond', serif; font-size:20px; color:var(--gold-soft); border-right:1px dashed rgba(var(--cream-rgb),0.25); padding-right:20px;}
+  .ticket-date span{ display:block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(var(--cream-rgb),0.5); margin-top:2px;}
+  .ticket-venue{ font-family:'Cormorant Garamond', serif; font-size:22px; }
+  .ticket-venue small{ display:block; font-family:'Jost'; font-size:12px; color:rgba(var(--cream-rgb),0.5); text-transform:uppercase; letter-spacing:0.1em; margin-top:4px;}
+  .ticket-status{ font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); }
+  .ticket-btn{
+    text-align:center; padding:10px 18px; border:1px solid var(--gold); color:var(--gold-soft);
+    text-decoration:none; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; border-radius:2px;
+    transition:background 0.3s, color 0.3s;
+  }
+  .ticket-btn:hover{ background:var(--gold); color:var(--plum-deep); }
+
+  /* NEWSLETTER */
+  .newsletter{
+    margin:0 6vw 140px; max-width:1200px; margin-left:auto; margin-right:auto;
+    padding:64px 6vw; border-radius:12px; text-align:center;
+    background:radial-gradient(ellipse 80% 100% at 50% 0%, rgba(217,163,172,0.1), transparent 65%), var(--plum);
+    border:1px solid rgba(198,151,63,0.2);
+  }
+  .newsletter h2{ font-family:'Cormorant Garamond', serif; font-weight:500; font-size:clamp(28px,4vw,40px); margin-bottom:14px; }
+  .newsletter p{ color:rgba(var(--cream-rgb),0.65); max-width:46ch; margin:0 auto 30px; font-size:15px; }
+  .newsletter-form{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; max-width:460px; margin:0 auto; }
+  .newsletter-form input[type="email"]{
+    flex:1; min-width:220px; background:rgba(var(--plum-deep-rgb),0.6); border:1px solid rgba(var(--cream-rgb),0.2);
+    color:var(--cream); padding:13px 18px; border-radius:2px; font-family:'Jost'; font-size:14px;
+  }
+  .newsletter-form input[type="email"]::placeholder{ color:rgba(var(--cream-rgb),0.4); }
+  .newsletter-form input[type="email"]:focus{ outline:2px solid var(--gold-soft); outline-offset:2px; border-color:var(--gold-soft); }
+  .newsletter-btn{
+    padding:13px 24px; background:var(--gold); color:var(--plum-deep); border:none; border-radius:2px;
+    font-size:12px; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:background 0.3s;
+  }
+  .newsletter-btn:hover{ background:var(--gold-soft); }
+  .newsletter-note{ margin-top:16px; font-size:12px; color:rgba(var(--cream-rgb),0.4); }
+  .newsletter-success{ color:var(--gold-soft); font-size:14px; margin-top:16px; display:none; }
+  .newsletter-success.show{ display:block; }
+
+  /* FOOTER */
+  footer{
+    padding:80px 6vw 40px; text-align:center; border-top:1px solid rgba(var(--cream-rgb),0.1);
+    max-width:1200px; margin:0 auto;
+  }
+  footer .brand{ font-family:'Instrument Serif', serif; font-style:italic; font-size:32px; color:var(--gold-soft); margin-bottom:20px;}
+  footer .socials{ display:flex; gap:26px; justify-content:center; margin-bottom:30px; flex-wrap:wrap; }
+  footer a{ color:var(--cream); text-decoration:none; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; opacity:0.7; transition:opacity 0.3s;}
+  footer a:hover{ opacity:1; }
+  footer .legal{ display:flex; gap:26px; justify-content:center; margin-bottom:28px; flex-wrap:wrap; }
+  footer .legal a{ font-size:11px; opacity:0.5; }
+  footer .fine{ font-size:12px; color:rgba(var(--cream-rgb),0.4); }
+
+  /* BACK TO TOP */
+  .to-top{
+    position:fixed; right:24px; bottom:24px; z-index:70;
+    width:46px; height:46px; border-radius:50%; border:1px solid rgba(198,151,63,0.4);
+    background:rgba(var(--plum-deep-rgb),0.85); backdrop-filter:blur(6px); color:var(--gold-soft);
+    display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:16px;
+    opacity:0; pointer-events:none; transform:translateY(10px);
+    transition:opacity 0.3s, transform 0.3s, background 0.3s;
+  }
+  .to-top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
+  .to-top:hover{ background:var(--gold); color:var(--plum-deep); }
+
+  @media (max-width: 860px){
+    nav ul{
+      position:fixed; top:0; right:0; height:100vh; width:min(280px, 78vw);
+      background:rgba(var(--plum-deep-rgb),0.98); backdrop-filter:blur(10px);
+      flex-direction:column; justify-content:center; align-items:flex-start; gap:28px;
+      padding:0 40px; transform:translateX(100%); transition:transform 0.35s ease;
+      display:flex;
+    }
+    nav ul.open{ transform:translateX(0); }
+    .nav-toggle{ display:block; }
+    .hero-grid{ grid-template-columns:1fr; text-align:center;}
+    .eyebrow{ justify-content:center; }
+    .hero-sub{ margin-left:auto; margin-right:auto; }
+    .hero-ctas{ justify-content:center; }
+    .hero-stats{ justify-content:center; }
+    .vinyl-wrap{ height:260px; }
+    .vinyl{ width:220px; height:220px; }
+    .about{ grid-template-columns:1fr; gap:36px; padding:80px 6vw; }
+    .about-left-sticky{ position:static; gap:20px; }
+    .about-img-frame{ width:100%; max-width:440px; margin:0 auto; }
+    .about-quote{ text-align:center; }
+    .about-body p{ margin-left:auto; margin-right:auto; text-align:center; }
+    .about-facts{ justify-content:center; text-align:center; gap:24px; }
+    .track{ grid-template-columns: 32px auto 1fr auto; row-gap:3px; gap:6px 8px; padding:12px 6px; }
+    .track-num, .track-cover{ display:none; }
+    .track-play-btn{ width:32px; height:32px; font-size:12px; grid-column:1; grid-row:1; justify-self:center; }
+    .track-name{ grid-column:2 / span 2; grid-row:1; min-width:0; }
+    .track-name small{ font-size:10px; }
+    .track-actions{ grid-column:4; grid-row:1 / span 2; justify-self:end; align-self:center; display:flex; gap:2px; }
+    .track-len{ grid-column:2; grid-row:2; justify-self:start; font-size:12px; }
+    .track-tag{ grid-column:3; grid-row:2; justify-self:start; }
+    .volume-wrap{ display:none; }
+    .album-grid{ grid-template-columns:1fr; }
+    .album-card{ padding:18px; }
+    .press-grid{ grid-template-columns:1fr; }
+    .ticket{ grid-template-columns:1fr; text-align:left; gap:10px; padding:18px 20px; }
+    .ticket-date{ border-right:none; padding-right:0; }
+    .ticket::before, .ticket::after{ display:none; }
+    .sec-kicker{ margin-top:0; }
+  }
+
+  @media (max-width:400px){
+    .hero-title{ font-size:clamp(36px, 12vw, 48px); }
+    .hero-sub{ font-size:14px; margin-top:18px; }
+    .hero-stats{ gap:20px; }
+    .hero-stat b{ font-size:22px; }
+    .setlist{ padding:70px 4vw 30px; }
+    .track{ padding:10px 4px; gap:4px 6px; }
+    .track-play-btn{ width:28px; height:28px; font-size:10px; }
+    .track-name{ font-size:15px; }
+    .track-name small{ font-size:9px; }
+    .track-tag{ font-size:9px; padding:3px 8px; }
+    .tag-pill{ font-size:10px; padding:5px 10px; }
+    .newsletter h2{ font-size:clamp(22px, 7vw, 28px); }
+    .newsletter-form{ flex-direction:column; }
+    .newsletter-btn{ width:100%; }
+    .about-facts{ gap:16px; flex-direction:column; align-items:center; }
+    .about-facts div{ text-align:center; }
+    .ticket{ padding:14px 14px; }
+    .ticket-btn{ padding:8px 14px; font-size:11px; }
+    .sec-title{ font-size:clamp(20px, 5vw, 28px); }
+    .sec-head{ margin-bottom:20px; }
+    .queue-drawer-inner{ padding:14px 4vw; }
+    .queue-item{ padding:7px 0; gap:8px; }
+    .queue-item-title{ font-size:13px; }
+    .album-art-title{ font-size:15px; padding:4px 10px; }
+    .album-desc{ font-size:13px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .vinyl{ animation:none !important; }
+    .tonearm{ transition:none !important; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* TOP PROGRESS BAR */
+  .top-progress-bar{
+    position:fixed; top:0; left:0; width:100%; height:3px; z-index:1200;
+    background:rgba(var(--cream-rgb),0.06); pointer-events:none;
+  }
+  .top-progress-fill{
+    height:100%; width:0%; background:linear-gradient(to right, var(--gold), var(--gold-soft));
+    transition:width 0.15s linear, opacity 0.3s ease; opacity:0;
+  }
+  .top-progress-fill.show{ opacity:1; }
+
+  /* AMBIENT ALBUM-ART GLOW */
+  .ambient-glow{
+    position:absolute; top:-10%; left:-10%; right:-10%; bottom:-10%;
+    z-index:0; pointer-events:none;
+    opacity:0; transition:opacity 0.8s ease;
+    background-size:cover; background-position:center;
+    background-color:rgba(var(--plum-deep-rgb),0.6);
+    background-blend-mode:overlay;
+    filter:blur(40px) saturate(0.8) brightness(0.7);
+  }
+  .ambient-glow.show{ opacity:1; }
+  .setlist > *:not(.ambient-glow):not(.sec-bg-overlay){ position:relative; z-index:1; }
+
+  /* NOW PLAYING TOAST */
+  .now-playing-toast{
+    position:fixed; top:20px; right:20px; z-index:1300;
+    display:flex; align-items:center; gap:12px;
+    background:rgba(var(--plum-deep-rgb),0.92); border:1px solid rgba(198,151,63,0.3);
+    border-radius:12px; padding:12px 18px 12px 12px; max-width:300px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.35); backdrop-filter:blur(6px);
+    transform:translateX(120%); opacity:0; transition:transform 0.45s ease, opacity 0.45s ease;
+  }
+  .now-playing-toast.show{ transform:translateX(0); opacity:1; }
+  .toast-cover{
+    width:44px; height:44px; border-radius:6px; flex-shrink:0;
+    background-size:cover; background-position:center;
+    border:1px solid rgba(var(--cream-rgb),0.15);
+  }
+  .toast-text{ display:flex; flex-direction:column; gap:2px; min-width:0; }
+  .toast-label{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rose); }
+  .toast-title{ font-family:'Cormorant Garamond', serif; font-size:17px; color:var(--cream); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .toast-sub{ font-size:11px; color:rgba(var(--cream-rgb),0.55); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  @media (max-width:600px){
+    .now-playing-toast{ left:12px; right:12px; max-width:none; top:12px; }
+    .track-modal{ padding:24px 18px; }
+    .track-modal-title{ font-size:22px; }
+    .track-modal-lyric{ font-size:18px; max-height:200px; }
+    .album-modal-header{ flex-direction:column; align-items:center; text-align:center; gap:14px; }
+    .album-modal-art{ width:80px; height:80px; }
+    .album-modal{ padding:24px 18px; }
+    .newsletter-form input[type="email"]{ min-width:auto; width:100%; }
+    .newsletter{ padding:32px 5vw; margin-bottom:40px; }
+    .ticket{ padding:14px 16px; gap:6px; }
+    .ticket-venue{ font-size:16px; }
+    .hero{ padding:80px 6vw 40px; }
+    .hero-title{ font-size:clamp(42px, 13vw, 64px); }
+    .hero-sub{ font-size:14px; margin-top:14px; }
+    .hero-ctas{ gap:16px; margin-top:28px; }
+    .hero-stats{ gap:16px; margin-top:36px; }
+    .vinyl-wrap{ height:170px; }
+    .vinyl{ width:150px; height:150px; }
+    .vinyl-label{ width:75px; height:75px; }
+    .vinyl-label span{ font-size:11px; }
+    .tonearm{ transform:rotate(-20deg); right:8px; height:120px; }
+    .vinyl-wrap:hover .tonearm, .vinyl-wrap:focus-within .tonearm, .vinyl-wrap.playing .tonearm{ transform:rotate(0deg); }
+    footer{ padding:30px 6vw 20px; }
+    footer .brand{ font-size:24px; }
+    footer p{ font-size:12px; }
+    .about{ padding:40px 6vw 50px; }
+    .about-body p{ font-size:14px; }
+    .about-facts{ gap:12px; }
+    .albums{ padding:20px 6vw 50px; }
+    .album-art-title{ font-size:16px; }
+    .album-desc{ font-size:12px; }
+    .setlist{ padding:80px 5vw 40px; }
+    .tag-filters{ gap:6px; margin-bottom:20px; }
+    .setlist-toolbar{ margin:-10px 0 20px; }
+    .cookie-banner{ flex-direction:column; align-items:stretch; gap:12px; padding:14px 16px; }
+    .cookie-actions{ justify-content:flex-end; }
+    .tour{ padding:40px 6vw 60px; }
+    .press{ padding:20px 6vw 50px; }
+    .sec-title{ font-size:clamp(22px, 6vw, 30px); }
+    .sec-head{ margin-bottom:24px; }
+    .sec-kicker{ font-size:13px; margin-top:0; margin-bottom:24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-progress-bar" aria-hidden="true"><div class="top-progress-fill" id="topProgressFill"></div></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="staff-bg"></div>
+
+<nav aria-label="Primary">
+  <a class="brand" href="#main">Laufey</a>
+  <div class="nav-right">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+    <span></span><span></span><span></span>
+  </button>
+  </div>
+  <ul id="navMenu">
+    <li><a href="#music">Music</a></li>
+    <li><a href="#albums">Albums</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#press">Press</a></li>
+    <li><a href="#tour">Tour</a></li>
+    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">☾</button></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<section class="hero">
+  <div class="hero-photo-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/64/Laufey_performing_at_the_Montreux_Jazz_Festival_in_Montreux%2C_Switzerland_on_July_11th_2023_-_1.jpg');"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">A little bit of everything</div>
+      <h1 class="hero-title">Laufey<em>bewitched</em></h1>
+      <p class="hero-sub">Jazz standards for a generation raised on heartbreak playlists - cello in one hand, a torch song in the other. Icelandic-Chinese songwriter, classically trained, hopelessly romantic.</p>
+      <div class="hero-ctas">
+        <a class="hero-cta" href="#music">Press play →</a>
+        <a class="hero-cta ghost" href="#tour">See tour dates</a>
+      </div>
+    </div>
+    <div class="vinyl-wrap" tabindex="0">
+      <div class="tonearm" aria-hidden="true"></div>
+      <div class="vinyl">
+        <div class="vinyl-label"><span>Bewitched</span></div>
+      </div>
+      <div class="now-playing-label" id="nowPlayingLabel"></div>
+    </div>
+  </div>
+</section>
+
+<section class="setlist reveal" id="music">
+  <div class="ambient-glow" id="ambientGlow" aria-hidden="true"></div>
+  <div class="sec-bg-overlay" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/06/Laufey_ReithHumphreys1.jpg');"></div>
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">the setlist</h2>
+    <div class="sec-line"></div>
+  </div>
+  <p class="sec-kicker">A handful of favorites - old standards reworked, new heartbreaks dressed up in strings.</p>
+  <div class="setlist-toolbar">
+    <button class="play-all-btn" id="playAllBtn"><span class="icon">▶</span> Play all</button>
+    <button class="shuffle-btn" id="shuffleBtn"><span class="icon">⇄</span> Shuffle</button>
+    <div class="setlist-search">
+      <input type="text" id="trackSearch" placeholder="Filter by title or mood…" aria-label="Filter tracks by title or tag">
+    </div>
+  </div>
+  <div class="tag-filters" id="tagFilters" aria-label="Filter by mood"></div>
+  <div class="tracklist">
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/6/e/5/0/6e5ce0e8e1a654857daed25913ae1fcf.mp3?hdnea=exp=1784277876~acl=/api/1/1/6/e/5/0/6e5ce0e8e1a654857daed25913ae1fcf.mp3*~data=user_id=0,application_id=42~hmac=a1bbe29b4d7f6db9bf7033a9cb8993758ad6242a561e7d242797c0b3214a37a3" data-lyric="Confess I loved you from the start" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/43iIQbw5hx986dUEZbr3eN" data-apple="https://music.apple.com/us/song/from-the-start/1690609217">
+      <div class="track-num">01</div>
+      <button class="track-play-btn" aria-label="Play From the Start">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">From the Start <small class="track-album-link" tabindex="0" role="button">Bewitched</small></div>
+      <div class="track-len">2:59</div>
+      <div class="track-tag">Fan favorite</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add From the Start to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for From the Start">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/3/3/c/0/33cd892024ffff59cc88764d21c969a6.mp3?hdnea=exp=1784277876~acl=/api/1/1/3/3/c/0/33cd892024ffff59cc88764d21c969a6.mp3*~data=user_id=0,application_id=42~hmac=b5b10489bf9fce7717696c3046fdc83ac9014ca95edf68728b0697c3fcda0f62" data-lyric="Everybody's falling in love and I'm falling behind" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/04mLDslAQyY7Exw5YXAfCX" data-apple="https://music.apple.com/us/song/falling-behind/1646536478">
+      <div class="track-num">02</div>
+      <button class="track-play-btn" aria-label="Play Falling Behind">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/274aa382459107ae1024106e33a10d7a/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Falling Behind <small class="track-album-link" tabindex="0" role="button">Everything I Know About Love</small></div>
+      <div class="track-len">2:52</div>
+      <div class="track-tag">Waltz</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Falling Behind to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Falling Behind">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/1/0/0/0/100775c0aee654254f31cc80dd4dafe7.mp3?hdnea=exp=1784284567~acl=/api/1/1/1/0/0/0/100775c0aee654254f31cc80dd4dafe7.mp3*~data=user_id=0,application_id=42~hmac=d6ccd14af06d87ced455cf09c0d5e78216b590ffef2f3c95332944fa501c7446" data-lyric="I blinked and suddenly I had a Valentine" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/6cx5CvFhqN19efStehJqoW" data-apple="https://music.apple.com/us/song/valentine/1646536077">
+      <div class="track-num">03</div>
+      <button class="track-play-btn" aria-label="Play Valentine">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/274aa382459107ae1024106e33a10d7a/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Valentine <small class="track-album-link" tabindex="0" role="button">Everything I Know About Love</small></div>
+      <div class="track-len">3:38</div>
+      <div class="track-tag">Ballad</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Valentine to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Valentine">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/b/2/6/0/b26ec4e400179780fbf1cc2a59b9e176.mp3?hdnea=exp=1784277876~acl=/api/1/1/b/2/6/0/b26ec4e400179780fbf1cc2a59b9e176.mp3*~data=user_id=0,application_id=42~hmac=c19cd5bd50cc0486e1345768c7cda79bc55f587594e90bef47f15df899ae9f42" data-lyric="It hurts to be something, it's worse to be nothing with you" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/08PdFBcXzpkn1cWNgmKqhn" data-apple="https://music.apple.com/us/song/promise/1690608935">
+      <div class="track-num">04</div>
+      <button class="track-play-btn" aria-label="Play Promise">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Promise <small class="track-album-link" tabindex="0" role="button">Bewitched</small></div>
+      <div class="track-len">3:05</div>
+      <div class="track-tag">Ballad</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Promise to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Promise">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/7/4/e/0/74ea95a5bc4c05d667dd13897307be40.mp3?hdnea=exp=1784277876~acl=/api/1/1/7/4/e/0/74ea95a5bc4c05d667dd13897307be40.mp3*~data=user_id=0,application_id=42~hmac=88a5b4aff6425c572dff455be928c003073167cd2e358fd4857ca8b5e076fdae" data-lyric="No boy's gonna kill the dreamer in me" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/1YxQxV5sKZN1TgVpXl5MLA" data-apple="https://music.apple.com/us/song/dreamer/1690607895">
+      <div class="track-num">05</div>
+      <button class="track-play-btn" aria-label="Play Dreamer">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Dreamer <small class="track-album-link" tabindex="0" role="button">Bewitched</small></div>
+      <div class="track-len">3:11</div>
+      <div class="track-tag">Uptempo</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Dreamer to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Dreamer">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/0/5/a/0/05ae203fd81ec33504743ca0618ff123.mp3?hdnea=exp=1784277876~acl=/api/1/1/0/5/a/0/05ae203fd81ec33504743ca0618ff123.mp3*~data=user_id=0,application_id=42~hmac=b3d179936c10e71132e902fe1a82b9f36214c418b86e520759d75b450780365b" data-lyric="You were my everything, I was your second best" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/7sOUsRHqnu18iSYE0KM11f" data-apple="https://music.apple.com/us/song/second-best/1690608088">
+      <div class="track-num">06</div>
+      <button class="track-play-btn" aria-label="Play Second Best">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Second Best <small class="track-album-link" tabindex="0" role="button">Bewitched</small></div>
+      <div class="track-len">3:20</div>
+      <div class="track-tag">Strings</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Second Best to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Second Best">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/0/2/e/0/02e2659d9fdc3fd7f4c862b7e32c356f.mp3?hdnea=exp=1784278680~acl=/api/1/1/0/2/e/0/02e2659d9fdc3fd7f4c862b7e32c356f.mp3*~data=user_id=0,application_id=42~hmac=b0824135331d8d5257090e98868ed5d2d15bc0019e1496da210f1b74b3679cfc" data-lyric="What a curse it is to be a lover girl" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/3E619cvUK3bgsm4xH9A34H" data-apple="https://music.apple.com/us/song/lover-girl/1812589428">
+      <div class="track-num">07</div>
+      <button class="track-play-btn" aria-label="Play Lover Girl">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/4d8199579dcf2790bf250e3427db8e73/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Lover Girl <small class="track-album-link" tabindex="0" role="button">A Matter of Time</small></div>
+      <div class="track-len">2:44</div>
+      <div class="track-tag">Acoustic</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Lover Girl to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Lover Girl">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/6/3/3/0/633e9760601a8a16a4fe893860933f77.mp3?hdnea=exp=1784277876~acl=/api/1/1/6/3/3/0/633e9760601a8a16a4fe893860933f77.mp3*~data=user_id=0,application_id=42~hmac=61dba87b2f3c544a2fc7822acfdc4a256ca337fed29a7b5df42cc80630955c4a" data-lyric="I'll let you break my heart again" data-writers="Laufey" data-producers="Laufey" data-spotify="https://open.spotify.com/track/3oX7VxSz6EHHnxKGUjk9sx" data-apple="https://music.apple.com/us/song/let-you-break-my-heart-again/1606417551">
+      <div class="track-num">08</div>
+      <button class="track-play-btn" aria-label="Play Let You Break My Heart Again">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/9825bb50e26e8daae1ba75b7f7a17489/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Let You Break My Heart Again <small class="track-album-link" tabindex="0" role="button">Let You Break My Heart Again</small></div>
+      <div class="track-len">4:29</div>
+      <div class="track-tag">Cello / Vocal</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Let You Break My Heart Again to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Let You Break My Heart Again">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/e/e/6/0/ee6d14a433a184e0c3e73dd6be876d87.mp3?hdnea=exp=1784279858~acl=/api/1/1/e/e/6/0/ee6d14a433a184e0c3e73dd6be876d87.mp3*~data=user_id=0,application_id=42~hmac=a8a0077acb0c8b67931d40dba9b4da27fa97d8f54da0a0207d5be61055ef3678" data-lyric="Frosted window panes, candles gleaming inside" data-writers="Sammy Cahn &amp; Jule Styne (jazz standard, Laufey cover)" data-producers="Laufey, Spencer Stewart (arrangement / production)" data-standard="true" data-spotify="https://open.spotify.com/track/3vpW9dkAZFi8Sg0onz4wvR" data-apple="https://music.apple.com/us/song/the-christmas-waltz/1651594158">
+      <div class="track-num">09</div>
+      <button class="track-play-btn" aria-label="Play Love to Keep Me Warm">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/45ad16772d73fe7c97f977f6ca0c458f/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">The Christmas Waltz <small class="track-album-link" tabindex="0" role="button">A Very Laufey Holiday</small></div>
+      <div class="track-len">2:47</div>
+      <div class="track-tag">Holiday</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add The Christmas Waltz to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for The Christmas Waltz">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/7/7/e/0/77e28e637f5c8c74703ec51d48687b20.mp3?hdnea=exp=1784284575~acl=/api/1/1/7/7/e/0/77e28e637f5c8c74703ec51d48687b20.mp3*~data=user_id=0,application_id=42~hmac=7dae87d8e45fad26120bde630ff9f141a6e3de09915c8abf9ff9d6d097af2985" data-lyric="I wish you bluebirds in the spring" data-writers="Charles Trenet (music); English lyrics by Albert Beach (jazz standard, Laufey cover)" data-producers="Laufey (arrangement / production)" data-standard="true" data-spotify="https://open.spotify.com/track/5zHLswJplBXyPstFSSMIOH" data-apple="https://music.apple.com/us/song/i-wish-you-love/1608060255">
+      <div class="track-num">10</div>
+      <button class="track-play-btn" aria-label="Play I Wish You Love">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/823a340856f4242cd7195a2582b395e7/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">I Wish You Love <small class="track-album-link" tabindex="0" role="button">Typical of Me EP</small></div>
+      <div class="track-len">2:35</div>
+      <div class="track-tag">Standard</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add I Wish You Love to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for I Wish You Love">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+    <div class="track" data-src="https://cdnt-preview.dzcdn.net/api/1/1/6/5/d/0/65d93a41c45f1719614f9fd18168f177.mp3?hdnea=exp=1784284886~acl=/api/1/1/6/5/d/0/65d93a41c45f1719614f9fd18168f177.mp3*~data=user_id=0,application_id=42~hmac=44f29e120bd5a5964c1cf08ca10af3a115f55ae991275d7a4babe8e02465563f" data-lyric="The whole town is talking 'bout how you've fallen in love" data-writers="Laufey, Spencer Stewart" data-producers="Laufey, Spencer Stewart" data-spotify="https://open.spotify.com/track/63qUnp65NdnhMIgxl6SM1z" data-apple="https://music.apple.com/us/song/too-little-too-late/1834261320">
+      <div class="track-num">11</div>
+      <button class="track-play-btn" aria-label="Play Too Little, Too Late">▶</button>
+      <div class="track-cover" style="background-image: url('https://cdn-images.dzcdn.net/images/cover/4d8199579dcf2790bf250e3427db8e73/250x250-000000-80-0-0.jpg');"></div>
+      <div class="track-name">Too Little, Too Late <small class="track-album-link" tabindex="0" role="button">A Matter of Time</small></div>
+      <div class="track-len">3:53</div>
+      <div class="track-tag">Ballad</div>
+      <div class="track-actions"><button class="track-mini-btn queue-btn" aria-label="Add Too Little, Too Late to queue">+</button><button class="track-mini-btn info-btn" aria-label="Lyrics and credits for Too Little, Too Late">ⓘ</button></div>
+      <div class="lyric-drawer"><p></p><span>Lyrics preview</span></div>
+    </div>
+  </div>
+  <p class="setlist-empty" id="setlistEmpty">No tracks match that search - try a different title or mood.</p>
+</section>
+
+<section class="albums reveal" id="albums">
+  <div class="sec-bg-overlay" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fb/Laufey_performing_at_La_Madeleine_in_Brussels%2C_Belgium_on_February_21st_2024_-_3.jpg');"></div>
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">the records</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="timeline">
+    <div class="timeline-track">
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2021</div><div class="timeline-title">Typical of Me EP</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2022</div><div class="timeline-title">Everything I Know About Love</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2023</div><div class="timeline-title">Bewitched</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2023</div><div class="timeline-title">A Night At The Symphony</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2025</div><div class="timeline-title">A Very Laufey Holiday</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2025</div><div class="timeline-title">A Matter of Time</div></div>
+    </div>
+  </div>
+  <div class="album-grid">
+    <div class="album-card">
+      <div class="album-art" style="background: radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(198,151,63,0.9)), url('https://cdn-images.dzcdn.net/images/cover/823a340856f4242cd7195a2582b395e7/500x500-000000-80-0-0.jpg');">
+        <span class="album-art-title">Typical of Me</span>
+      </div>
+      <span class="album-year">2021 · EP</span>
+      <div class="album-title">Typical of Me EP</div>
+      <p class="album-desc">Laufey's debut EP released in 2021, featuring bedroom jazz-pop originals and a cover of the standard 'I Wish You Love'.</p>
+    </div>
+    <div class="album-card">
+      <div class="album-art" style="background: radial-gradient(circle at 30% 20%, rgba(224,192,122,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/274aa382459107ae1024106e33a10d7a/500x500-000000-80-0-0.jpg');">
+        <span class="album-art-title">Everything I Know About Love</span>
+      </div>
+      <span class="album-year">2022 · Debut LP</span>
+      <div class="album-title">Everything I Know About Love</div>
+      <p class="album-desc">Her debut full-length album from 2022, blending torch-song ballads with string sections and heartfelt storytelling.</p>
+    </div>
+    <div class="album-card">
+      <div class="album-art" style="background: radial-gradient(circle at 30% 20%, rgba(224,192,122,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/c8db50be5ef05fcca645b3c41a930578/500x500-000000-80-0-0.jpg');">
+        <span class="album-art-title">A Night At The Symphony</span>
+      </div>
+      <span class="album-year">2023 · Live Album</span>
+      <div class="album-title">A Night At The Symphony</div>
+      <p class="album-desc">Recorded live with the Iceland Symphony Orchestra in 2023, featuring symphonic renditions of fan favorites.</p>
+    </div>
+    <div class="album-card">
+      <div class="album-art" style="background: radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(198,151,63,0.9)), url('https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/500x500-000000-80-0-0.jpg');">
+        <span class="album-art-title">Bewitched</span>
+      </div>
+      <span class="album-year">2023 · Sophomore LP</span>
+      <div class="album-title">Bewitched</div>
+      <p class="album-desc">The Grammy-winning 2023 sophomore album - bigger arrangements, waltzing ballads, and the viral hit 'From the Start'.</p>
+    </div>
+    <div class="album-card">
+      <div class="album-art" style="background: radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/45ad16772d73fe7c97f977f6ca0c458f/500x500-000000-80-0-0.jpg');">
+        <span class="album-art-title">A Very Laufey Holiday</span>
+      </div>
+      <span class="album-year">2025 · Christmas EP</span>
+      <div class="album-title">A Very Laufey Holiday</div>
+      <p class="album-desc">A 2025 Christmas EP of warm jazz standards and cozy holiday originals.</p>
+    </div>
+    <div class="album-card">
+      <div class="album-art" style="background: radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/4d8199579dcf2790bf250e3427db8e73/500x500-000000-80-0-0.jpg');">
+        <span class="album-art-title">A Matter of Time</span>
+      </div>
+      <span class="album-year">2025 · Studio Album</span>
+      <div class="album-title">A Matter of Time</div>
+      <p class="album-desc">Her 2025 third album, exploring darker themes with mature songwriting and adventurous orchestrations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about reveal" id="about">
+  <div class="sec-bg-overlay" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/64/Laufey_performing_at_the_Montreux_Jazz_Festival_in_Montreux%2C_Switzerland_on_July_11th_2023_-_1.jpg');"></div>
+  <div class="about-left-sticky">
+    <div class="about-img-frame" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fb/Laufey_performing_at_La_Madeleine_in_Brussels%2C_Belgium_on_February_21st_2024_-_3.jpg');"></div>
+    <div class="about-quote">I grew up listening mostly to classical and jazz, and jazz music is where all my vocal inspiration has come from.</div>
+  </div>
+  <div class="about-body">
+    <p>Raised between Reykjavík and Washington, D.C. by a musical family, <strong>Laufey Lín Jónsdóttir</strong> spent her childhood split between a cello case and a piano bench, absorbing Ella Fitzgerald and Chopin in equal measure.</p>
+    <p>She writes the way old jazz records used to feel - unhurried, a little bruised, dressed up in strings. Her arrangements borrow the swing and shimmer of the 1950s while her lyrics stay stubbornly, embarrassingly of-the-moment: crushes texted at 2am, love that doesn't call back.</p>
+    <p>What started as bedroom covers on the internet became sold-out arenas of people who never thought they'd love a torch song. <strong>Laufey</strong> didn't bring jazz back - she just proved it never really left.</p>
+    <div class="about-facts">
+      <div><b>Reykjavík &amp; D.C.</b><span>Raised between</span></div>
+      <div><b>Cello, piano &amp; guitar</b><span>Multi-instrumentalist</span></div>
+      <div><b>Berklee College of Music</b><span>Presidential Scholar</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="press reveal" id="press">
+  <div class="sec-bg-overlay" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/06/Laufey_ReithHumphreys1.jpg');"></div>
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">what they're saying</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="press-grid">
+    <div class="press-card">
+      <p class="press-quote">What's most charming about Laufey, alongside her undeniable mastery of the Great American Songbook traditions she's steeped in, is the way she alternately indulges, interrogates, and goofs on them.</p>
+      <div class="press-source">Pitchfork</div>
+    </div>
+    <div class="press-card">
+      <p class="press-quote">The Icelandic-Chinese star's dazzling second album is confident and musically ambitious, melding jazz, pop and modern classical composition.</p>
+      <div class="press-source">NME</div>
+    </div>
+    <div class="press-card">
+      <p class="press-quote">Laufey is something of a sensation... marrying the structures and rhythms of the Great American Songbook with sharp lyrics wryly addressing the romantic struggles of a young woman in the 2020s.</p>
+      <div class="press-source">The Telegraph</div>
+    </div>
+  </div>
+</section>
+
+<section class="tour reveal" id="tour">
+  <div class="sec-bg-overlay" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fb/Laufey_performing_at_La_Madeleine_in_Brussels%2C_Belgium_on_February_21st_2024_-_3.jpg');"></div>
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">on stage</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="ticket-list">
+    <div class="ticket">
+      <div class="ticket-date">31 <span>JUL</span></div>
+      <div class="ticket-venue">Rod Laver Arena<small>Melbourne, Australia</small></div>
+      <div class="ticket-status">Selling fast</div>
+      <a class="ticket-btn" href="#">Tickets</a>
+    </div>
+    <div class="ticket">
+      <div class="ticket-date">07 <span>AUG</span></div>
+      <div class="ticket-venue">Qudos Bank Arena<small>Sydney, Australia</small></div>
+      <div class="ticket-status">Selling fast</div>
+      <a class="ticket-btn" href="#">Tickets</a>
+    </div>
+    <div class="ticket">
+      <div class="ticket-date">12 <span>SEP</span></div>
+      <div class="ticket-venue">Palacio de los Deportes<small>Mexico City, Mexico</small></div>
+      <div class="ticket-status">Available</div>
+      <a class="ticket-btn" href="#">Tickets</a>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter reveal">
+  <h2>Stay in the loop</h2>
+  <p>A little bit of everything, straight to your inbox - new tour dates, unreleased demos, the occasional 2am ramble.</p>
+  <form class="newsletter-form" id="newsletterForm">
+    <label for="newsletterEmail" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+    <input type="email" id="newsletterEmail" placeholder="you@example.com" required>
+    <button type="submit" class="newsletter-btn">Sign up</button>
+  </form>
+  <p class="newsletter-success" id="newsletterSuccess">You're on the list - thank you.</p>
+  <p class="newsletter-note">Demo form only - no data is sent or stored anywhere.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="brand">Laufey</div>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">Spotify</a>
+    <a href="#">YouTube</a>
+    <a href="#">TikTok</a>
+  </div>
+  <div class="legal">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <div class="fine">A fan-made tribute design. Not an official Laufey site. © 2026.</div>
+</footer>
+
+<a href="#main" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" hidden>
+  <p>This site uses cookies for basic functionality and font loading. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-btn" id="cookieDecline">Decline</button>
+    <button class="cookie-btn primary" id="cookieAccept">Accept</button>
+  </div>
+</div>
+
+<div class="now-playing-toast" id="nowPlayingToast" role="status" aria-live="polite">
+  <div class="toast-cover" id="toastCover"></div>
+  <div class="toast-text">
+    <span class="toast-label">Now playing</span>
+    <span class="toast-title" id="toastTitle"></span>
+    <span class="toast-sub" id="toastSub"></span>
+  </div>
+</div>
+
+<div class="mini-player" id="miniPlayer" role="region" aria-label="Now playing">
+  <div class="mini-player-cover" id="miniPlayerCover"></div>
+  <div class="mini-player-info">
+    <div class="mini-player-title" id="miniPlayerTitle">—</div>
+    <div class="mini-player-sub" id="miniPlayerSub">—</div>
+    <span class="mini-player-pos" id="miniPlayerPos"></span>
+  </div>
+  <button class="mini-player-btn mini-shuffle-btn" id="miniShuffleBtn" aria-label="Toggle shuffle">⇄</button>
+  <button class="mini-player-btn" id="miniPlayerPrev" aria-label="Previous track">⏮</button>
+  <button class="mini-player-btn" id="miniPlayerToggle" aria-label="Play or pause">▶</button>
+  <button class="mini-player-btn" id="miniPlayerNext" aria-label="Next track">⏭</button>
+  <div class="seek-wrap">
+    <span class="seek-time" id="seekCurrent">0:00</span>
+    <input type="range" class="seek-bar" id="seekBar" min="0" max="100" value="0" step="0.1" aria-label="Seek">
+    <span class="seek-time" id="seekTotal">0:00</span>
+  </div>
+  <div class="volume-wrap">
+    <span class="volume-icon" id="volumeIcon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></span>
+    <input type="range" class="volume-bar" id="volumeBar" min="0" max="100" value="80" aria-label="Volume">
+  </div>
+  <button class="mini-player-btn mini-player-queue-btn" id="miniPlayerQueueToggle" aria-label="Show queue">☰<span class="queue-badge" id="queueBadge" hidden>0</span></button>
+  <button class="mini-player-close" id="miniPlayerClose" aria-label="Close player">✕</button>
+</div>
+
+<div class="queue-drawer" id="queueDrawer">
+  <div class="queue-drawer-inner">
+    <div class="queue-drawer-head">
+      <span>Up next</span>
+      <button class="queue-clear-btn" id="queueClearBtn">Clear queue</button>
+    </div>
+    <div id="queueList"></div>
+  </div>
+</div>
+
+<div class="track-modal-overlay" id="trackModalOverlay">
+  <div class="track-modal" role="dialog" aria-modal="true" aria-labelledby="trackModalTitle">
+    <button class="track-modal-close" id="trackModalClose" aria-label="Close">✕</button>
+    <div class="track-modal-title" id="trackModalTitle">Track</div>
+    <div class="track-modal-album" id="trackModalAlbum">Album</div>
+    <div class="track-modal-lyric" id="trackModalLyric">"..."</div>
+    <div class="track-modal-note">Full lyrics displayed above. Also on <a href="https://genius.com" target="_blank" rel="noopener">Genius</a> and your streaming service.</div>
+    <div class="track-modal-section-label">Credits</div>
+    <div class="track-modal-credits" id="trackModalCredits"><b>Writers:</b> — <br><b>Producers:</b> —</div>
+    <div class="track-modal-section-label">Listen</div>
+    <div class="track-modal-streams">
+      <a class="stream-link" id="trackModalSpotify" href="#" target="_blank" rel="noopener">Spotify</a>
+      <a class="stream-link" id="trackModalApple" href="#" target="_blank" rel="noopener">Apple Music</a>
+    </div>
+  </div>
+</div>
+
+<div class="track-modal-overlay" id="albumModalOverlay">
+  <div class="track-modal album-modal" role="dialog" aria-modal="true" aria-labelledby="albumModalTitle">
+    <button class="track-modal-close" id="albumModalClose" aria-label="Close">✕</button>
+    <div class="album-modal-header">
+      <div class="album-modal-art" id="albumModalArt"></div>
+      <div class="album-modal-meta">
+        <div class="track-modal-title" id="albumModalTitle">Album</div>
+        <div class="track-modal-album" id="albumModalYear">Year</div>
+      </div>
+    </div>
+    <div class="track-modal-section-label">Tracklist</div>
+    <div class="album-modal-tracklist" id="albumModalTracklist"></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    // Cookie consent
+    var banner = document.getElementById('cookieBanner');
+    var accept = document.getElementById('cookieAccept');
+    var decline = document.getElementById('cookieDecline');
+    var KEY = 'laufey_cookie_consent';
+    try{
+      if(!localStorage.getItem(KEY)){
+        banner.hidden = false;
+      }
+    }catch(e){ banner.hidden = false; }
+    function setConsent(val){
+      try{ localStorage.setItem(KEY, val); }catch(e){}
+      banner.hidden = true;
+    }
+    accept.addEventListener('click', function(){ setConsent('accepted'); });
+    decline.addEventListener('click', function(){ setConsent('declined'); });
+
+    // Theme toggle (Midnight Plum / Chamber Jazz Cream)
+    var themeToggle = document.getElementById('themeToggle');
+    var THEME_KEY = 'laufey_theme';
+    var root = document.documentElement;
+    function applyTheme(theme){
+      if(theme === 'light'){
+        root.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '☀';
+        themeToggle.setAttribute('aria-label', 'Switch to Midnight Plum (dark) mode');
+      } else {
+        root.removeAttribute('data-theme');
+        themeToggle.textContent = '☾';
+        themeToggle.setAttribute('aria-label', 'Switch to Chamber Jazz Cream (light) mode');
+      }
+    }
+    var savedTheme = null;
+    try{ savedTheme = localStorage.getItem(THEME_KEY); }catch(e){}
+    applyTheme(savedTheme === 'light' ? 'light' : 'dark');
+    themeToggle.addEventListener('click', function(){
+      var isLight = root.getAttribute('data-theme') === 'light';
+      var next = isLight ? 'dark' : 'light';
+      applyTheme(next);
+      try{ localStorage.setItem(THEME_KEY, next); }catch(e){}
+    });
+
+    // Sticky nav background on scroll
+    var nav = document.querySelector('nav');
+    function onScroll(){
+      if(window.scrollY > 40){ nav.classList.add('scrolled'); }
+      else{ nav.classList.remove('scrolled'); }
+      toTop.classList.toggle('show', window.scrollY > 600);
+    }
+    var toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', onScroll, { passive:true });
+    onScroll();
+
+    // Mobile nav toggle
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', function(){
+      var isOpen = menu.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Active section highlighting
+    var navLinks = Array.prototype.slice.call(menu.querySelectorAll('a'));
+    var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+    if('IntersectionObserver' in window && sections.length){
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          var link = navLinks.find(function(a){ return a.getAttribute('href') === '#' + entry.target.id; });
+          if(!link) return;
+          if(entry.isIntersecting){
+            navLinks.forEach(function(a){ a.removeAttribute('aria-current'); });
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+      sections.forEach(function(s){ obs.observe(s); });
+    }
+
+    // Scroll-reveal animations
+    var revealEls = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      var revealObs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            revealObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealEls.forEach(function(el){ revealObs.observe(el); });
+    } else {
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    }
+
+    // Demo newsletter form (no network activity)
+    var form = document.getElementById('newsletterForm');
+    var success = document.getElementById('newsletterSuccess');
+    if(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        success.classList.add('show');
+        form.reset();
+      });
+    }
+
+    // Full lyrics data
+    var lyricsMap = {
+      "From the Start": "Don't you notice how\nI get quiet when there's no one else around?\nMe and you and awkward silence\nDon't you dare look at me that way\nI don't need reminders of how you don't feel the same\n\nOh, the burning pain\nListening to you harp on 'bout some new soulmate\n\"She's so perfect,\" blah, blah, blah\nOh, how I wish you'll wake up one day\nRun to me, confess your love, at least just let me say\n\nThat when I talk to you, oh, Cupid walks right through\nAnd shoots an arrow through my heart\nAnd I sound like a loon, but don't you feel it too?\nConfess I loved you from the start\n\nWhat's a girl to do?\nLying on my bed, staring into the blue\nUnrequited, terrifying\nLove is driving me a bit insane\nHave to get this off my chest\nI'm telling you today\n\nThat when I talk to you, oh, Cupid walks right through\nAnd shoots an arrow through my heart\nAnd I sound like a loon, but don't you feel it too?\nConfess I loved you from the start\n\nConfess I loved you\nJust thinking of you\nI know I've loved you from the start",
+      "Falling Behind": "Moved out to a new city\nJune is dawning down on me\nAnd all that I can find's\nA sickly romance in the air\nLovers stroll without a care in sight\nOh, this can't be right\n\n'Cause the sun's engaged to the sky\nAnd my best friend's found a new guy\nI'm only getting older\nI've never had a shoulder to cry on\nSomeone to call mine\nEverybody's falling in love and I'm falling behind\n\nTouched the ocean, fell right in\nStepped outside and burned my skin\nMy life won't go my way\nBossa nova in my room\nHope that I'll find someone too to love\nBecause\n\nThe sun's engaged to the sky\nAnd my best friend's found a new guy\nI'm only getting older\nI've never had a shoulder to cry on\nSomeone to call mine\nEverybody's falling in love and I'm falling behind\n\nEverybody's falling in love\nEverybody's falling in love, oh\nEverybody's falling in love but me\n(One, two, three)",
+      "Valentine": "I've rejected affection for years and years\nNow I have it and damn it, it's kind of weird\nHe tells me I'm pretty, don't know how to respond\nI tell him that he's pretty too, can I say that? Don't have a clue\n\nWith every passing moment, I surprise myself\nI'm scared of flies, I'm scared of guys, someone please help\n'Cause I think I've fallen in love this time\nI blinked and suddenly I had a Valentine\n\nWhat if he's the last one I kiss?\nWhat if he's the only one I'll ever miss?\nMaybe I should run, I'm only twenty-one\nI don't even know who I want to become\n\nI've lost all control of my heartbeat now\nGot caught in a romance with him somehow\nI still feel a shock through every bone\nWhen I hear an \"I love you\"\n'Cause now I've got someone to lose\n\nThe first one to ever like me back\nI'm seconds away from a heart attack\nHow the hell did I fall in love this time?\nAnd honestly, I can't believe I get to call you mine\nI blinked and suddenly I had a Valentine",
+      "Promise": "I made a promise\nTo distance myself\nTook a flight through aurora skies\nHonestly, I didn't think about\nHow we didn't say goodbye\nJust, \"See you very soon\"\n\nIt hurts to be something\nIt's worse to be nothing with you\nMm, mm-mm, mm\n\nSo I didn't call you\nFor sixteen long days\nAnd I should get a cigarette\nFor so much restraint\nNo matter how long I resist temptation\nI will always lose\n\nIt hurts to be something\nIt's worse to be nothing with you\n\nI've done the math\nThere's no solution\nWe'll never last\nWhy can't I let go of this?\n\nSo I broke my promise\nI called you last night\nI shouldn't have, I wouldn't have\nIf it weren't for the sight of a boy\nWho looked just like you\nStanding out on Melrose Avenue\n\nIt hurts to be something\nIt's worse to be nothing with you\nMm, mm-mm\nIt hurts to be something\nIt's worse to be nothing with you",
+      "Dreamer": "Let me be a dreamer, let me float\nI can see the whole world\nFrom my own little cloud\nUp by the Milky Way\nI'll stay here forever and a day\n\nYou can't pin me down\nI fear all solid ground\nI'd rather be alone at tea\nLove when nobody's makin' me, oh\nBoys just make me cry\nBelieve me, I have tried\nI've made my rounds\nKissed some mouths\nTrust me, I don't want a single soul around, oh\n\nI'm giving up, I'm throwing in my hat\nI can't take another lifeless little chat\nI'm moving up into a cloud, into my fantasy\nAnd no boy's gonna be so smart as to\nTry and pierce my porcelain heart\nNo boy's going to kill the dreamer in me\n\nSome might call me mad\nThe worst this town has had\nI fell right down the rabbit hole\nLegends say I fell so fast I lost my soul\nOh, my melancholic days\nAre few and far away\nI've had enough, called it off\nAs far as I'm concerned, this witch is numb to love, oh\n\nI'm giving up, I'm throwing in my hat\nI can't take another lifeless little chat\nI'm moving up into a cloud, into my fantasy\nAnd no boy's gonna be so smart as to\nTry and pierce my porcelain heart\nNo boy's going to kill the dreamer in me\n\nAnd no boy's gonna be so smart as to\nTry and pierce my porcelain heart\nNo boy's going to kill the dreamer in me",
+      "Second Best": "I'll never forget how stupid in love I felt\nI'll always regret how I couldn't ever tell\nThat you walked a little faster, left me behind\nKissed me with somebody else in mind\nI loved you so much\nThat I settled for less\n\nOh, you were my everything\nI was your second best\n\nLying awake, I'd watch as you'd dream at night\nNightingale singing half-hearted lullabies\nWell, you swung me around in that midsummer dance\nHeld me in close as you thought of your past\nI love way too much\nOh, this hurts to confess\n\nOh, you were my everything\nI was your second best\n\nYou've given me nothing to miss\nHonestly, life has been much better since\nI spoke to you last\nWhy am I still wondering\nIf I stand a chance or if you'd have me back?\n\nEveryone warned me you were a bad idea\nI never listen\nMaybe I will next year\nWhen I've walked a little further into my life\nFallen in love and left you behind\nBut I'm still a little in love with this mess\n\nOh, you were my everything\nI'm just your second best\nSecond best",
+      "Lover Girl": "This skyscraper's causing vertigo\nThe countdown begins in Tokyo\nTwenty-seven days alone\nMeans twenty million ways to cope without you\n\nI'm in a reckless fever, love-struck girl, I'd tease her\nThought I'd never be her\nQuite the job you've done on me, sir\nYou've been hosting parties in my mind\nI'm working overtime to have you in my world\nOh, what a curse it is to be a lover girl\n\nForced to get creative, wrote my feelings down\nThe independent lady in me's nowhere to be found\nI can't wait another day to see you\nHow embarrassing to be this way\n\nI'm in a reckless fever, love-struck girl, I'd tease her\nThought I'd never be her\nQuite the job you've done on me, sir\nYou've been hosting parties in my mind\nI'm working overtime to have you in my world\nOh, what a curse it is to be in love\n\nI wait by the phone like a high school movie\nDream at the shows, you'll come running to me\nThink I see you in the wings, god, I'm hallucinating\n\nWhat a reckless fever, love-struck girl, I'd tease her\nThought I'd never be her\nQuite the job you've done on me, sir\nYou've been hosting parties in my mind\nI'm working overtime, you've become my whole world\nOh, what a curse it is to be a lover girl",
+      "Let You Break My Heart Again": "Feeling kind of sick tonight\nAll I've had is coffee and leftover pie\nIt's no wonder why\nStill you take up all my mind\nI don't even think that you care like I do\nI should stop\nHeaven knows I've tried\n\nOne day I will stop falling in love with you\nSome day someone will like me like I like you\nUntil then I'll drink my coffee, eat my pie\nPretend that we are more than friends\nThen of course I'll let you break my heart again\n\nI'm just tryna understand\nWhat I am to you\nMore than songs we've exchanged\nMidnight calls, sunset views\nPromise I don't mean to cry\nBut I get overwhelmed and confused\nIf only you knew what I felt like\n\nOne day I will stop falling in love with you\nSome day someone will like me like I like you\nUntil then I'll drink my coffee, eat my pie\nPretend that we are more than friends\nThen of course I'll let you break my heart again\n\nSome day, one day\nI will stop falling in love with you\nUntil I do\nI'll be thinking of you\nLet you break my heart again",
+      "The Christmas Waltz": "Frosted window panes\nCandles gleaming inside\nPainted candy canes on the tree\nSanta's on his way\nHe's filled his sleigh with things\nThings for you and for me\n\nIt's that time of year\nWhen the world falls in love\nEvery song you hear seems to say\nMerry Christmas, may your New Year dreams come true\nAnd this song of mine\nIn three-quarter time\nWishes you and yours the same thing too\n\nIt's that time of year\nWhen the world falls in love\nEvery song you hear seems to say\nMerry Christmas, may your New Year dreams come true\nAnd this song of mine\nIn three-quarter time\nWishes you and yours the same thing too\nMerry Christmas",
+      "I Wish You Love": "I wish you bluebirds in the spring\nTo give your heart a song to sing\nAnd then a kiss, but more than this\nI wish you love\n\nAnd in July a lemonade\nTo cool you in some leafy glade\nI wish you health and more than wealth\nI wish you love\n\nMy breaking heart and I agree\nThat you and I could never be\nSo, with my best, my very best\nI set you free\n\nI wish you shelter from the storm\nA cozy fire to keep you warm\nBut most of all, when snowflakes fall\nI wish you love\n\nMy breaking heart and I agree\nThat you and I could never be\nSo, with my best, my very best\nI set you free\n\nI wish you shelter from the storm\nA cozy fire to keep you warm\nBut most of all, when snowflakes fall\nBut most of all, when snowflakes fall\nI wish you love, love, love",
+      "Too Little, Too Late": "The whole town is talking 'bout how you've fallen in love\nI read in the papers, he's someone that girls dream about\nSome kind of ruler on top of a kingdom\nI'm just a jester, I'll never be him\nLast night, you called to me\nIt almost killed me\n\nTo hear you scream my name\nYour smile still kills the same\nI almost turned around\nYou chased me to the ground\nYou asked me how I've been, but how do I begin\nTo tell you I should've chased you 'cross every single state\nI lay down my sword for fate\n'Cause it's too little, way too late\n\nI didn't need the reminder of things I've done wrong\nOf promises broken, fragility hidden in song\nGuess that we're soulmates in different lifetimes\nWhat if you leave him, throw me a lifeline\nI know that you're happy\nBut it just killed me\n\nTo hear you scream my name\nA clear fucking X-ray of if I'd stuck around\nI swear to God, I almost drowned\nYou asked me how I've been, but how could I begin\nTo tell you I should've chased you\nI should be who you're engaged to\n\nLost my fight with fate\nA tug-of-war of leave and stay\nI give in, I abdicate\nI lay my sword down anyway\nI'll see you at Heaven's gate\n'Cause it's too little, way too late\n\nI'll toast outside your wedding day\nWhisper vows, I'll never say to you\n'Cause it's too little, all too late"
+    };
+    function fullLyrics(trackName){
+      return lyricsMap[trackName] || null;
+    }
+
+    // Album tracklist data for detail view
+    var albumData = [
+      {
+        name: "Typical of Me EP", year: "2021 · EP",
+        cover: "radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(198,151,63,0.9)), url('https://cdn-images.dzcdn.net/images/cover/823a340856f4242cd7195a2582b395e7/500x500-000000-80-0-0.jpg')",
+        tracks: [
+          { name: "Street by Street", duration: "3:44" },
+          { name: "Magnolia", duration: "3:00" },
+          { name: "Like the Movies", duration: "2:42" },
+          { name: "I Wish You Love", duration: "2:35" },
+          { name: "James", duration: "2:55" },
+          { name: "Someone New", duration: "3:18" },
+          { name: "Best Friend", duration: "2:44" }
+        ]
+      },
+      {
+        name: "Everything I Know About Love", year: "2022 · Debut LP",
+        cover: "radial-gradient(circle at 30% 20%, rgba(224,192,122,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/274aa382459107ae1024106e33a10d7a/500x500-000000-80-0-0.jpg')",
+        tracks: [
+          { name: "Fragile", duration: "4:01" },
+          { name: "Beautiful Stranger", duration: "3:21" },
+          { name: "Valentine", duration: "2:48" },
+          { name: "Above the Chinese Restaurant", duration: "3:43" },
+          { name: "Dear Soulmate", duration: "4:20" },
+          { name: "What Love Will Do to You", duration: "2:51" },
+          { name: "I've Never Been in Love Before", duration: "3:42" },
+          { name: "Just Like Chet", duration: "3:36" },
+          { name: "Everything I Know About Love", duration: "3:29" },
+          { name: "Falling Behind", duration: "2:53" },
+          { name: "Hi", duration: "3:13" },
+          { name: "Dance with You Tonight", duration: "2:38" },
+          { name: "Night Light", duration: "4:02" }
+        ]
+      },
+      {
+        name: "Bewitched", year: "2023 · Sophomore LP",
+        cover: "radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(198,151,63,0.9)), url('https://cdn-images.dzcdn.net/images/cover/3fc1aa2cb42822f6ca053b1dc9f0fdf3/500x500-000000-80-0-0.jpg')",
+        tracks: [
+          { name: "Dreamer", duration: "3:30" },
+          { name: "Second Best", duration: "3:24" },
+          { name: "Haunted", duration: "3:20" },
+          { name: "Must Be Love", duration: "3:04" },
+          { name: "While You Were Sleeping", duration: "2:57" },
+          { name: "Lovesick", duration: "3:45" },
+          { name: "California and Me", duration: "3:36" },
+          { name: "Nocturne", duration: "2:24" },
+          { name: "Promise", duration: "3:54" },
+          { name: "From the Start", duration: "2:49" },
+          { name: "Misty", duration: "3:29" },
+          { name: "Serendipity", duration: "3:39" },
+          { name: "Letter to My 13 Year Old Self", duration: "4:22" },
+          { name: "Bewitched", duration: "4:06" }
+        ]
+      },
+      {
+        name: "A Night At The Symphony", year: "2023 · Live Album",
+        cover: "radial-gradient(circle at 30% 20%, rgba(224,192,122,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/c8db50be5ef05fcca645b3c41a930578/500x500-000000-80-0-0.jpg')",
+        tracks: [
+          { name: "Fragile", duration: "4:09" },
+          { name: "Valentine", duration: "3:00" },
+          { name: "Dear Soulmate", duration: "4:52" },
+          { name: "I Wish You Love", duration: "2:49" },
+          { name: "Night Light", duration: "4:07" },
+          { name: "Ég Veit þú Kemur", duration: "3:36" },
+          { name: "Falling Behind", duration: "2:55" },
+          { name: "Best Friend", duration: "2:59" },
+          { name: "Like the Movies", duration: "3:32" },
+          { name: "The Nearness of You", duration: "2:48" },
+          { name: "Let You Break My Heart Again", duration: "5:02" },
+          { name: "What Love Will Do to You", duration: "3:00" },
+          { name: "Beautiful Stranger", duration: "3:31" },
+          { name: "Every Time We Say Goodbye", duration: "4:33" }
+        ]
+      },
+      {
+        name: "A Very Laufey Holiday", year: "2025 · Christmas EP",
+        cover: "radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/45ad16772d73fe7c97f977f6ca0c458f/500x500-000000-80-0-0.jpg')",
+        tracks: [
+          { name: "Santa Claus Is Comin' to Town", duration: "3:02" },
+          { name: "Santa Baby", duration: "2:13" },
+          { name: "Winter Wonderland", duration: "2:33" },
+          { name: "Christmas Magic", duration: "2:48" },
+          { name: "Christmas Dreaming", duration: "3:30" },
+          { name: "The Christmas Waltz", duration: "2:47" },
+          { name: "Love to Keep Me Warm", duration: "2:38" }
+        ]
+      },
+      {
+        name: "A Matter of Time", year: "2025 · Studio Album",
+        cover: "radial-gradient(circle at 30% 20%, rgba(217,163,172,0.6), rgba(43,26,38,0.9)), url('https://cdn-images.dzcdn.net/images/cover/4d8199579dcf2790bf250e3427db8e73/500x500-000000-80-0-0.jpg')",
+        tracks: [
+          { name: "Clockwork", duration: "2:30" },
+          { name: "Lover Girl", duration: "2:44" },
+          { name: "Snow White", duration: "3:13" },
+          { name: "Castle in Hollywood", duration: "2:33" },
+          { name: "Carousel", duration: "3:19" },
+          { name: "Silver Lining", duration: "3:17" },
+          { name: "Too Little, Too Late", duration: "3:53" },
+          { name: "Cuckoo Ballet", duration: "3:39" },
+          { name: "Forget-Me-Not", duration: "4:06" },
+          { name: "Tough Luck", duration: "3:12" },
+          { name: "A Cautionary Tale", duration: "4:16" },
+          { name: "Mr. Eclectic", duration: "2:35" },
+          { name: "Clean Air", duration: "2:35" },
+          { name: "Sabotage", duration: "3:34" }
+        ]
+      }
+    ];
+    function findTrackIndex(songName, albumName){
+      for(var j = 0; j < trackList.length; j++){
+        if(trackName(trackList[j]) === songName && trackAlbum(trackList[j]).indexOf(albumName) > -1){
+          return j;
+        }
+      }
+      for(var j = 0; j < trackList.length; j++){
+        if(trackName(trackList[j]) === songName){
+          return j;
+        }
+      }
+      return -1;
+    }
+
+    // Dynamic Audio Player Logic
+    var currentAudio = null;
+    var currentTrackEl = null;
+    var vinylWrap = document.querySelector('.vinyl-wrap');
+    var nowPlayingLabel = document.getElementById('nowPlayingLabel');
+    var trackRows = document.querySelectorAll('.track');
+    var trackList = Array.prototype.slice.call(trackRows);
+    var playAllMode = false;
+    var shuffleMode = false;
+    var shuffleOrder = [];
+    var queue = [];       // upcoming tracks
+    var history = [];     // previously played tracks (for prev button)
+    var siteTitle = document.title;
+
+    // Top progress bar / ambient glow / toast
+    var topProgressFill = document.getElementById('topProgressFill');
+    var ambientGlow = document.getElementById('ambientGlow');
+    var nowPlayingToast = document.getElementById('nowPlayingToast');
+    var toastCover = document.getElementById('toastCover');
+    var toastTitle = document.getElementById('toastTitle');
+    var toastSub = document.getElementById('toastSub');
+    var toastHideTimer = null;
+
+
+    // Mini player elements
+    var miniPlayer = document.getElementById('miniPlayer');
+    var miniCover = document.getElementById('miniPlayerCover');
+    var miniTitle = document.getElementById('miniPlayerTitle');
+    var miniSub = document.getElementById('miniPlayerSub');
+    var miniToggle = document.getElementById('miniPlayerToggle');
+    var miniPrev = document.getElementById('miniPlayerPrev');
+    var miniNext = document.getElementById('miniPlayerNext');
+    var miniClose = document.getElementById('miniPlayerClose');
+    var seekBar = document.getElementById('seekBar');
+    var seekCurrent = document.getElementById('seekCurrent');
+    var seekTotal = document.getElementById('seekTotal');
+    var seekDragging = false;
+    var volumeBar = document.getElementById('volumeBar');
+    var volumeIcon = document.getElementById('volumeIcon');
+    var miniPlayerPos = document.getElementById('miniPlayerPos');
+    var queueToggleBtn = document.getElementById('miniPlayerQueueToggle');
+    var queueBadge = document.getElementById('queueBadge');
+    var queueDrawer = document.getElementById('queueDrawer');
+    var queueList = document.getElementById('queueList');
+    var queueClearBtn = document.getElementById('queueClearBtn');
+
+    function formatTime(sec){
+      if(!isFinite(sec) || sec < 0) sec = 0;
+      var m = Math.floor(sec / 60);
+      var s = Math.floor(sec % 60);
+      return m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function trackName(track){
+      var nameEl = track.querySelector('.track-name');
+      return nameEl ? nameEl.childNodes[0].textContent.trim() : '';
+    }
+    function trackAlbum(track){
+      var small = track.querySelector('.track-name small');
+      return small ? small.textContent.trim() : '';
+    }
+    function trackCoverUrl(track){
+      var cover = track.querySelector('.track-cover');
+      if(!cover) return '';
+      var m = /url\((['"]?)(.*?)\1\)/.exec(cover.style.backgroundImage);
+      return m ? m[2] : '';
+    }
+
+    function setVinylPlaying(isPlaying, track){
+      if(!vinylWrap) return;
+      vinylWrap.classList.toggle('playing', isPlaying);
+      if(nowPlayingLabel){
+        nowPlayingLabel.textContent = (isPlaying && track) ? trackName(track) : '';
+      }
+    }
+
+    // Top progress bar (mini-player position mirrored to a thin bar at the very top of the viewport)
+    function setTopProgress(pct, active){
+      if(!topProgressFill) return;
+      topProgressFill.style.width = Math.max(0, Math.min(100, pct)) + '%';
+      topProgressFill.classList.toggle('show', !!active);
+    }
+
+    function updateAmbientGlow(track){
+      if(!ambientGlow) return;
+      if(!track){
+        ambientGlow.classList.remove('show');
+        return;
+      }
+      ambientGlow.style.backgroundImage = "url('" + trackCoverUrl(track) + "')";
+      ambientGlow.classList.add('show');
+    }
+
+    // "Now playing" in-page toast (no browser notification permission required)
+    function showNowPlayingToast(track){
+      if(!nowPlayingToast) return;
+      toastCover.style.backgroundImage = "url('" + trackCoverUrl(track) + "')";
+      toastTitle.textContent = trackName(track);
+      var album = trackAlbum(track);
+      toastSub.innerHTML = album ? '<button class="mini-player-album-link" tabindex="0">' + album + '</button>' : '';
+      nowPlayingToast.classList.add('show');
+      if(toastHideTimer) clearTimeout(toastHideTimer);
+      toastHideTimer = setTimeout(function(){
+        nowPlayingToast.classList.remove('show');
+      }, 4000);
+    }
+
+    function setDrawerText(track, show){
+      var drawer = track.querySelector('.lyric-drawer p');
+      if(!drawer) return;
+      if(show){
+        var tName = trackName(track);
+        var lyrics = fullLyrics(tName);
+        if(lyrics){
+          var lines = lyrics.split('\n');
+          var preview = lines.slice(0, 8).join('\n');
+          drawer.textContent = '\u201C' + preview + '\u201D';
+        } else {
+          var lyric = track.getAttribute('data-lyric');
+          drawer.textContent = lyric ? ('\u201C' + lyric + '\u201D') : '';
+        }
+      } else {
+        drawer.textContent = '';
+      }
+    }
+
+    function updateMiniPlayer(track, isPlaying){
+      if(!miniPlayer) return;
+      miniPlayer.classList.add('show');
+      miniCover.style.backgroundImage = "url('" + trackCoverUrl(track) + "')";
+      miniTitle.textContent = trackName(track);
+      var album = trackAlbum(track);
+      miniSub.innerHTML = album ? '<button class="mini-player-album-link" tabindex="0">' + album + '</button>' : '—';
+      miniToggle.textContent = isPlaying ? '⏸' : '▶';
+      miniToggle.setAttribute('aria-label', isPlaying ? 'Pause' : 'Play');
+      if(miniPlayerPos){
+        var idx = trackList.indexOf(track);
+        miniPlayerPos.textContent = (idx >= 0) ? (idx + 1) + ' / ' + trackList.length : '';
+      }
+    }
+
+    // "Now playing" tab title
+    function updateTabTitle(track, isPlaying){
+      if(isPlaying && track){
+        document.title = '▶ ' + trackName(track) + ' — Laufey';
+      } else {
+        document.title = siteTitle;
+      }
+    }
+
+    // Queue rendering
+    var dragIndex = -1;
+    function renderQueue(){
+      if(!queueList) return;
+      queueList.innerHTML = '';
+      if(queue.length === 0){
+        queueList.innerHTML = '<div class="queue-empty-note">Nothing queued - tap the + on any track to add it here.</div>';
+      } else {
+        queue.forEach(function(track, i){
+          var item = document.createElement('div');
+          item.className = 'queue-item';
+          item.draggable = true;
+          item.setAttribute('data-queue-index', i);
+          item.innerHTML =
+            '<span class="queue-drag-handle">⠿</span>' +
+            '<div class="queue-item-cover" style="background-image:url(\'' + trackCoverUrl(track) + '\')"></div>' +
+            '<div style="flex:1;">' +
+              '<div class="queue-item-title">' + trackName(track) + '</div>' +
+              '<div class="queue-item-sub">' + trackAlbum(track) + '</div>' +
+            '</div>' +
+            '<button class="queue-item-remove" aria-label="Remove from queue">✕</button>';
+          item.addEventListener('dragstart', function(e){
+            dragIndex = i;
+            item.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+          });
+          item.addEventListener('dragend', function(){
+            item.classList.remove('dragging');
+            dragIndex = -1;
+          });
+          item.addEventListener('dragover', function(e){
+            e.preventDefault();
+            item.classList.add('drag-over');
+          });
+          item.addEventListener('dragleave', function(){
+            item.classList.remove('drag-over');
+          });
+          item.addEventListener('drop', function(e){
+            e.preventDefault();
+            item.classList.remove('drag-over');
+            if(dragIndex >= 0 && dragIndex !== i){
+              var moved = queue.splice(dragIndex, 1)[0];
+              queue.splice(i, 0, moved);
+              renderQueue();
+            }
+          });
+          item.addEventListener('click', function(e){
+            if(e.target.classList.contains('queue-item-remove')) return;
+            if(e.target.closest('.queue-drag-handle')) return;
+            queue.splice(i, 1);
+            renderQueue();
+            playTrack(track);
+          });
+          item.querySelector('.queue-item-remove').addEventListener('click', function(e){
+            e.stopPropagation();
+            queue.splice(i, 1);
+            renderQueue();
+          });
+          queueList.appendChild(item);
+        });
+      }
+      if(queueBadge){
+        if(queue.length > 0){
+          queueBadge.textContent = queue.length;
+          queueBadge.hidden = false;
+        } else {
+          queueBadge.hidden = true;
+        }
+      }
+    }
+
+    function enqueueTrack(track){
+      if(!currentAudio){
+        playTrack(track);
+        return;
+      }
+      queue.push(track);
+      renderQueue();
+      var btn = track.querySelector('.queue-btn');
+      if(btn){
+        btn.classList.add('added');
+        btn.textContent = '✓';
+        setTimeout(function(){ btn.classList.remove('added'); btn.textContent = '+'; }, 900);
+      }
+    }
+
+    function stopCurrent(){
+      if(currentAudio){
+        currentAudio.pause();
+      }
+      if(currentTrackEl){
+        currentTrackEl.classList.remove('playing');
+        var oldBtn = currentTrackEl.querySelector('.track-play-btn');
+        if(oldBtn) oldBtn.textContent = '▶';
+        setDrawerText(currentTrackEl, false);
+      }
+      setTopProgress(0, false);
+      updateAmbientGlow(null);
+    }
+
+    function updateMediaSession(track){
+      if(!('mediaSession' in navigator)) return;
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: trackName(track),
+        artist: 'Laufey',
+        album: trackAlbum(track),
+        artwork: [
+          { src: trackCoverUrl(track), sizes: '250x250', type: 'image/jpeg' }
+        ]
+      });
+      navigator.mediaSession.setActionHandler('play', function(){
+        if(currentAudio && currentAudio.paused){
+          currentAudio.play();
+          if(currentTrackEl){
+            currentTrackEl.classList.add('playing');
+            var b = currentTrackEl.querySelector('.track-play-btn');
+            if(b) b.textContent = '⏸';
+          }
+          miniToggle.textContent = '⏸';
+          setVinylPlaying(true, currentTrackEl);
+          updateTabTitle(currentTrackEl, true);
+        }
+      });
+      navigator.mediaSession.setActionHandler('pause', function(){
+        if(currentAudio && !currentAudio.paused){
+          currentAudio.pause();
+          if(currentTrackEl){
+            currentTrackEl.classList.remove('playing');
+            var b = currentTrackEl.querySelector('.track-play-btn');
+            if(b) b.textContent = '▶';
+          }
+          miniToggle.textContent = '▶';
+          setVinylPlaying(false, null);
+          updateTabTitle(null, false);
+        }
+      });
+      navigator.mediaSession.setActionHandler('previoustrack', function(){
+        if(miniPrev) miniPrev.click();
+      });
+      navigator.mediaSession.setActionHandler('nexttrack', function(){
+        if(miniNext) miniNext.click();
+      });
+      navigator.mediaSession.setActionHandler('seekto', function(details){
+        if(currentAudio && details.seekTime != null){
+          currentAudio.currentTime = details.seekTime;
+        }
+      });
+    }
+
+    function playTrack(track, opts){
+      opts = opts || {};
+      var audioSrc = track.getAttribute('data-src');
+      var btn = track.querySelector('.track-play-btn');
+      if(!audioSrc) return;
+
+      if(currentTrackEl && currentTrackEl !== track && !opts.fromHistory){
+        history.push(currentTrackEl);
+      }
+
+      var prevAudio = currentAudio;
+      var targetVolume = volumeBar ? (parseFloat(volumeBar.value) / 100) : 0.8;
+
+      if(currentTrackEl){
+        currentTrackEl.classList.remove('playing');
+        var prevBtn = currentTrackEl.querySelector('.track-play-btn');
+        if(prevBtn) prevBtn.textContent = '▶';
+        setDrawerText(currentTrackEl, false);
+      }
+      if(prevAudio){
+        prevAudio.pause();
+        prevAudio.currentTime = 0;
+      }
+
+      currentAudio = new Audio(audioSrc);
+      currentAudio.volume = targetVolume;
+      currentTrackEl = track;
+
+      currentAudio.addEventListener('loadedmetadata', function(){
+        seekTotal.textContent = formatTime(currentAudio.duration);
+        seekBar.max = currentAudio.duration || 100;
+      });
+
+      currentAudio.addEventListener('timeupdate', function(){
+        if(seekDragging) return;
+        seekBar.value = currentAudio.currentTime;
+        seekCurrent.textContent = formatTime(currentAudio.currentTime);
+        var pct = currentAudio.duration ? (currentAudio.currentTime / currentAudio.duration) * 100 : 0;
+        setTopProgress(pct, true);
+      });
+
+      currentAudio.addEventListener('ended', function(){
+        track.classList.remove('playing');
+        if(btn) btn.textContent = '▶';
+        setVinylPlaying(false, null);
+        setDrawerText(track, false);
+        updateTabTitle(null, false);
+        setTopProgress(0, false);
+
+        if(queue.length > 0){
+          var nextTrack = queue.shift();
+          renderQueue();
+          playTrack(nextTrack, { fromHistory: false });
+          return;
+        }
+        if(shuffleMode && shuffleOrder.length > 0){
+          var curIdx = shuffleOrder.indexOf(track);
+          var nextIdx = curIdx + 1;
+          if(nextIdx < shuffleOrder.length){
+            playTrack(shuffleOrder[nextIdx]);
+            return;
+          }
+          generateShuffleOrder();
+          if(shuffleOrder.length > 0){
+            playTrack(shuffleOrder[0]);
+            return;
+          }
+        }
+        playAllMode = false;
+        updatePlayAllBtnLabel();
+        currentAudio = null;
+        currentTrackEl = null;
+        updateAmbientGlow(null);
+      });
+
+      currentAudio.play().then(function(){
+        track.classList.add('playing');
+        if(btn) btn.textContent = '⏸';
+        setVinylPlaying(true, track);
+        setDrawerText(track, true);
+        updateMiniPlayer(track, true);
+        updateTabTitle(track, true);
+        highlightAlbumModalTrack();
+        updateMediaSession(track);
+        updateAmbientGlow(track);
+        showNowPlayingToast(track);
+        setTopProgress(0, true);
+      }).catch(function(err){
+        console.error("Audio playback failed: ", err);
+        alert("Audio couldn't be loaded directly from the streaming API database. Please try again.");
+        setVinylPlaying(false, null);
+      });
+    }
+
+    trackList.forEach(function(track){
+      var btn = track.querySelector('.track-play-btn');
+      var audioSrc = track.getAttribute('data-src');
+      if(!btn || !audioSrc) return;
+
+      btn.addEventListener('click', function(e){
+        e.stopPropagation();
+
+        if(currentTrackEl === track){
+          if(currentAudio.paused){
+            currentAudio.play();
+            btn.textContent = '⏸';
+            track.classList.add('playing');
+            setVinylPlaying(true, track);
+            setDrawerText(track, true);
+            updateMiniPlayer(track, true);
+            updateTabTitle(track, true);
+          } else {
+            currentAudio.pause();
+            btn.textContent = '▶';
+            track.classList.remove('playing');
+            setVinylPlaying(false, null);
+            setDrawerText(track, false);
+            updateMiniPlayer(track, false);
+            updateTabTitle(null, false);
+          }
+          return;
+        }
+
+        playAllMode = false;
+        updatePlayAllBtnLabel();
+        playTrack(track);
+      });
+
+      track.addEventListener('dblclick', function(e){
+        if(e.target.closest('.track-actions') || e.target.closest('.track-play-btn')) return;
+        if(currentTrackEl === track && currentAudio && !currentAudio.paused){
+          currentAudio.pause();
+          btn.textContent = '▶';
+          track.classList.remove('playing');
+          setVinylPlaying(false, null);
+          setDrawerText(track, false);
+          updateMiniPlayer(track, false);
+          updateTabTitle(null, false);
+          return;
+        }
+        playAllMode = false;
+        updatePlayAllBtnLabel();
+        playTrack(track);
+      });
+
+      var queueBtn = track.querySelector('.queue-btn');
+      if(queueBtn){
+        queueBtn.addEventListener('click', function(e){
+          e.stopPropagation();
+          enqueueTrack(track);
+        });
+      }
+    });
+
+    // Play All - queues the rest of the setlist after starting the first track
+    var playAllBtn = document.getElementById('playAllBtn');
+    function updatePlayAllBtnLabel(){
+      if(!playAllBtn) return;
+      playAllBtn.innerHTML = playAllMode
+        ? '<span class="icon">⏸</span> Playing all'
+        : '<span class="icon">▶</span> Play all';
+    }
+    if(playAllBtn){
+      playAllBtn.addEventListener('click', function(){
+        if(playAllMode){
+          playAllMode = false;
+          queue = [];
+          renderQueue();
+          stopCurrent();
+          setVinylPlaying(false, null);
+          updateTabTitle(null, false);
+          currentAudio = null;
+          currentTrackEl = null;
+          updatePlayAllBtnLabel();
+          return;
+        }
+        var visible = trackList.filter(function(t){ return !t.classList.contains('filtered-out'); });
+        if(visible.length === 0) return;
+        playAllMode = true;
+        updatePlayAllBtnLabel();
+        if(shuffleMode){
+          var rest = visible.slice(1);
+          var shuffled = rest.slice();
+          for(var si = shuffled.length - 1; si > 0; si--){
+            var sj = Math.floor(Math.random() * (si + 1));
+            var tmp = shuffled[si]; shuffled[si] = shuffled[sj]; shuffled[sj] = tmp;
+          }
+          queue = shuffled;
+        } else {
+          queue = visible.slice(1);
+        }
+        renderQueue();
+        playTrack(visible[0]);
+      });
+    }
+
+    // Shuffle mode
+    function generateShuffleOrder(){
+      var visible = trackList.filter(function(t){ return !t.classList.contains('filtered-out'); });
+      shuffleOrder = visible.slice();
+      for(var si = shuffleOrder.length - 1; si > 0; si--){
+        var sj = Math.floor(Math.random() * (si + 1));
+        var tmp = shuffleOrder[si]; shuffleOrder[si] = shuffleOrder[sj]; shuffleOrder[sj] = tmp;
+      }
+    }
+    function updateShuffleButtons(){
+      var els = document.querySelectorAll('.shuffle-btn, .mini-shuffle-btn');
+      els.forEach(function(el){ el.classList.toggle('active', shuffleMode); });
+    }
+    var shuffleBtn = document.getElementById('shuffleBtn');
+    var miniShuffleBtn = document.getElementById('miniShuffleBtn');
+    function toggleShuffle(){
+      shuffleMode = !shuffleMode;
+      updateShuffleButtons();
+      if(shuffleMode) generateShuffleOrder();
+    }
+    if(shuffleBtn) shuffleBtn.addEventListener('click', toggleShuffle);
+    if(miniShuffleBtn) miniShuffleBtn.addEventListener('click', toggleShuffle);
+
+    // Mini player controls
+    if(miniToggle){
+      miniToggle.addEventListener('click', function(){
+        if(!currentAudio) return;
+        if(currentAudio.paused){
+          currentAudio.play();
+          miniToggle.textContent = '⏸';
+          if(currentTrackEl){
+            currentTrackEl.classList.add('playing');
+            var b = currentTrackEl.querySelector('.track-play-btn');
+            if(b) b.textContent = '⏸';
+          }
+          setVinylPlaying(true, currentTrackEl);
+          updateTabTitle(currentTrackEl, true);
+        } else {
+          currentAudio.pause();
+          miniToggle.textContent = '▶';
+          if(currentTrackEl){
+            currentTrackEl.classList.remove('playing');
+            var b2 = currentTrackEl.querySelector('.track-play-btn');
+            if(b2) b2.textContent = '▶';
+          }
+          setVinylPlaying(false, null);
+          updateTabTitle(null, false);
+        }
+      });
+    }
+    if(miniNext){
+      miniNext.addEventListener('click', function(){
+        if(!currentTrackEl) return;
+        if(queue.length > 0){
+          var nextTrack = queue.shift();
+          renderQueue();
+          playTrack(nextTrack);
+          return;
+        }
+        if(shuffleMode && shuffleOrder.length > 0){
+          var curIdx = shuffleOrder.indexOf(currentTrackEl);
+          var nextIdx = curIdx + 1;
+          if(nextIdx < shuffleOrder.length){
+            playTrack(shuffleOrder[nextIdx]);
+            return;
+          }
+          generateShuffleOrder();
+          if(shuffleOrder.length > 0){
+            playTrack(shuffleOrder[0]);
+            return;
+          }
+        }
+        var idx = trackList.indexOf(currentTrackEl);
+        var nextFallback = trackList[(idx + 1) % trackList.length];
+        playTrack(nextFallback);
+      });
+    }
+    if(miniPrev){
+      miniPrev.addEventListener('click', function(){
+        if(history.length > 0){
+          var prevTrack = history.pop();
+          if(currentTrackEl) queue.unshift(currentTrackEl);
+          renderQueue();
+          playTrack(prevTrack, { fromHistory: true });
+          return;
+        }
+        if(shuffleMode && shuffleOrder.length > 0){
+          var curIdx = shuffleOrder.indexOf(currentTrackEl);
+          var prevIdx = curIdx - 1;
+          if(prevIdx >= 0){
+            playTrack(shuffleOrder[prevIdx]);
+            return;
+          }
+        }
+        if(!currentTrackEl) return;
+        var idx = trackList.indexOf(currentTrackEl);
+        var prevFallback = trackList[(idx - 1 + trackList.length) % trackList.length];
+        playTrack(prevFallback);
+      });
+    }
+    if(miniClose){
+      miniClose.addEventListener('click', function(){
+        playAllMode = false;
+        updatePlayAllBtnLabel();
+        stopCurrent();
+        setVinylPlaying(false, null);
+        updateTabTitle(null, false);
+        currentAudio = null;
+        currentTrackEl = null;
+        miniPlayer.classList.remove('show');
+        queueDrawer.classList.remove('open');
+      });
+    }
+    if(seekBar){
+      seekBar.addEventListener('input', function(){
+        seekDragging = true;
+        seekCurrent.textContent = formatTime(seekBar.value);
+      });
+      seekBar.addEventListener('change', function(){
+        if(currentAudio){
+          currentAudio.currentTime = parseFloat(seekBar.value);
+        }
+        seekDragging = false;
+      });
+    }
+
+    // Volume control
+    function setVolumeIcon(v){
+      if(!volumeIcon) return;
+      var svgOff = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>';
+      var svgLow = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>';
+      var svgHigh = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
+      volumeIcon.innerHTML = v === 0 ? svgOff : (v < 0.5 ? svgLow : svgHigh);
+    }
+    var savedVolume = localStorage.getItem('laufey_volume');
+    if(savedVolume !== null && volumeBar){
+      volumeBar.value = savedVolume;
+      setVolumeIcon(parseFloat(savedVolume) / 100);
+    }
+    if(volumeBar){
+      volumeBar.addEventListener('input', function(){
+        var v = parseFloat(volumeBar.value) / 100;
+        if(currentAudio) currentAudio.volume = v;
+        setVolumeIcon(v);
+        localStorage.setItem('laufey_volume', volumeBar.value);
+      });
+    }
+
+    // Queue drawer toggle
+    if(queueToggleBtn){
+      queueToggleBtn.addEventListener('click', function(){
+        queueDrawer.classList.toggle('open');
+      });
+    }
+    if(queueClearBtn){
+      queueClearBtn.addEventListener('click', function(){
+        queue = [];
+        renderQueue();
+      });
+    }
+    renderQueue();
+
+    // Track search / filter (combined with mood/tag pills below)
+    var trackSearch = document.getElementById('trackSearch');
+    var setlistEmpty = document.getElementById('setlistEmpty');
+    var activeTag = null;
+
+    function applyFilters(){
+      var q = trackSearch ? trackSearch.value.trim().toLowerCase() : '';
+      var visibleCount = 0;
+      trackList.forEach(function(track){
+        var name = trackName(track).toLowerCase();
+        var tagEl = track.querySelector('.track-tag');
+        var tag = tagEl ? tagEl.textContent.trim() : '';
+        var album = trackAlbum(track).toLowerCase();
+        var matchesQuery = !q || name.indexOf(q) > -1 || tag.toLowerCase().indexOf(q) > -1 || album.indexOf(q) > -1;
+        var matchesTag = !activeTag || tag === activeTag;
+        var matches = matchesQuery && matchesTag;
+        track.classList.toggle('filtered-out', !matches);
+        if(matches) visibleCount++;
+      });
+      if(setlistEmpty) setlistEmpty.classList.toggle('show', visibleCount === 0);
+    }
+    if(trackSearch){
+      trackSearch.addEventListener('input', applyFilters);
+    }
+
+    // Mood / tag filter pills - built dynamically from whatever tags exist in the tracklist
+    var tagFilters = document.getElementById('tagFilters');
+    if(tagFilters){
+      var uniqueTags = [];
+      trackList.forEach(function(track){
+        var tagEl = track.querySelector('.track-tag');
+        var tag = tagEl ? tagEl.textContent.trim() : '';
+        if(tag && uniqueTags.indexOf(tag) === -1) uniqueTags.push(tag);
+      });
+      var allPill = document.createElement('button');
+      allPill.type = 'button';
+      allPill.className = 'tag-pill active';
+      allPill.textContent = 'All moods';
+      tagFilters.appendChild(allPill);
+      var pills = [allPill];
+      uniqueTags.forEach(function(tag){
+        var pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'tag-pill';
+        pill.textContent = tag;
+        pill.setAttribute('data-tag', tag);
+        tagFilters.appendChild(pill);
+        pills.push(pill);
+      });
+      tagFilters.addEventListener('click', function(e){
+        var pill = e.target.closest('.tag-pill');
+        if(!pill) return;
+        pills.forEach(function(p){ p.classList.remove('active'); });
+        pill.classList.add('active');
+        activeTag = pill.getAttribute('data-tag') || null;
+        applyFilters();
+      });
+    }
+
+    // Track info modal (lyrics preview + credits + streaming links)
+    var trackModalOverlay = document.getElementById('trackModalOverlay');
+    var trackModalClose = document.getElementById('trackModalClose');
+    var trackModalTitle = document.getElementById('trackModalTitle');
+    var trackModalAlbum = document.getElementById('trackModalAlbum');
+    var trackModalLyric = document.getElementById('trackModalLyric');
+    var trackModalCredits = document.getElementById('trackModalCredits');
+    var trackModalSpotify = document.getElementById('trackModalSpotify');
+    var trackModalApple = document.getElementById('trackModalApple');
+
+    function openTrackModal(track){
+      trackModalTitle.textContent = trackName(track);
+      trackModalAlbum.textContent = trackAlbum(track);
+      var tName = trackName(track);
+      var lyrics = fullLyrics(tName);
+      if(lyrics){
+        trackModalLyric.textContent = '\u201C' + lyrics + '\u201D';
+      } else {
+        var lyric = track.getAttribute('data-lyric');
+        trackModalLyric.textContent = lyric ? ('\u201C' + lyric + '\u201D') : '';
+      }
+      var writers = track.getAttribute('data-writers') || '—';
+      var producers = track.getAttribute('data-producers') || '—';
+      trackModalCredits.innerHTML = '<b>Writers:</b> ' + writers + '<br><b>Producers:</b> ' + producers;
+      trackModalSpotify.href = track.getAttribute('data-spotify') || '#';
+      trackModalApple.href = track.getAttribute('data-apple') || '#';
+      trackModalOverlay.classList.add('open');
+    }
+    function closeTrackModal(){
+      trackModalOverlay.classList.remove('open');
+    }
+    trackList.forEach(function(track){
+      var infoBtn = track.querySelector('.info-btn');
+      if(!infoBtn) return;
+      infoBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        openTrackModal(track);
+      });
+    });
+    if(trackModalClose) trackModalClose.addEventListener('click', closeTrackModal);
+    if(trackModalOverlay){
+      trackModalOverlay.addEventListener('click', function(e){
+        if(e.target === trackModalOverlay) closeTrackModal();
+      });
+    }
+
+    // Album detail modal
+    var albumModalOverlay = document.getElementById('albumModalOverlay');
+    var albumModalClose = document.getElementById('albumModalClose');
+    var albumModalArt = document.getElementById('albumModalArt');
+    var albumModalTitle = document.getElementById('albumModalTitle');
+    var albumModalYear = document.getElementById('albumModalYear');
+    var albumModalTracklist = document.getElementById('albumModalTracklist');
+    var albumCards = document.querySelectorAll('.album-card');
+
+    function openAlbumModal(card){
+      var titleEl = card.querySelector('.album-title');
+      var yearEl = card.querySelector('.album-year');
+      var artEl = card.querySelector('.album-art');
+      var title = titleEl ? titleEl.textContent.trim() : '';
+
+      albumModalTitle.textContent = title;
+      albumModalYear.textContent = yearEl ? yearEl.textContent.trim() : '';
+      if(artEl){
+        var m = /url\((['"]?)(.*?)\1\)/.exec(artEl.style.backgroundImage);
+        albumModalArt.style.backgroundImage = m ? "url('" + m[2] + "')" : '';
+      }
+
+      var data = albumData.filter(function(a){ return a.name === title; })[0];
+      albumModalTracklist.innerHTML = '';
+      if(!data){
+        albumModalTracklist.innerHTML = '<div class="queue-empty-note">No tracklist data available.</div>';
+      } else {
+        data.tracks.forEach(function(t, i){
+          var num = (i + 1 < 10 ? '0' : '') + (i + 1);
+          var idx = findTrackIndex(t.name, data.name);
+          var hasTrack = idx >= 0;
+          var row = document.createElement('div');
+          row.className = 'album-modal-track' + (hasTrack ? ' playable' : ' unavailable');
+          var playBtn = hasTrack
+            ? '<button class="album-modal-play" aria-label="Play ' + t.name + '">▶</button>'
+            : '';
+          row.innerHTML =
+            '<div class="album-modal-track-num">' + num + '</div>' +
+            '<div class="album-modal-track-name">' + t.name + '</div>' +
+            '<div class="album-modal-track-len">' + t.duration + '</div>' +
+            playBtn;
+          if(hasTrack){
+            (function(trackIdx){
+              row.addEventListener('click', function(e){
+                if(e.target.tagName === 'BUTTON' && !e.target.closest('.album-modal-play')) return;
+                closeAlbumModal();
+                playAllMode = false;
+                updatePlayAllBtnLabel();
+                playTrack(trackList[trackIdx]);
+              });
+            })(idx);
+          }
+          albumModalTracklist.appendChild(row);
+        });
+        highlightAlbumModalTrack();
+      }
+      albumModalOverlay.classList.add('open');
+    }
+    function highlightAlbumModalTrack(){
+      if(!currentTrackEl || !albumModalTracklist) return;
+      var playingName = trackName(currentTrackEl);
+      var items = albumModalTracklist.querySelectorAll('.album-modal-track');
+      items.forEach(function(item){
+        var nameEl = item.querySelector('.album-modal-track-name');
+        if(nameEl && nameEl.textContent.trim() === playingName){
+          item.classList.add('currently-playing');
+        } else {
+          item.classList.remove('currently-playing');
+        }
+      });
+    }
+    function closeAlbumModal(){
+      albumModalOverlay.classList.remove('open');
+    }
+    albumCards.forEach(function(card, i){
+      card.addEventListener('click', function(){ openAlbumModal(card); });
+    });
+    if(albumModalClose) albumModalClose.addEventListener('click', closeAlbumModal);
+    if(albumModalOverlay){
+      albumModalOverlay.addEventListener('click', function(e){
+        if(e.target === albumModalOverlay) closeAlbumModal();
+      });
+    }
+
+    // Open the album modal from a track row's album name (finds the matching album card)
+    function openAlbumModalByName(name){
+      var match = null;
+      albumCards.forEach(function(card){
+        var titleEl = card.querySelector('.album-title');
+        if(titleEl && titleEl.textContent.trim() === name) match = card;
+      });
+      if(match) openAlbumModal(match);
+    }
+    trackList.forEach(function(track){
+      var albumLink = track.querySelector('.track-album-link');
+      if(!albumLink) return;
+      albumLink.addEventListener('click', function(e){
+        e.stopPropagation();
+        openAlbumModalByName(albumLink.textContent.trim());
+      });
+      albumLink.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          e.stopPropagation();
+          openAlbumModalByName(albumLink.textContent.trim());
+        }
+      });
+    });
+
+    // Clickable album name in mini-player and toast
+    document.addEventListener('click', function(e){
+      var target = e.target;
+      if(target.classList.contains('mini-player-album-link')){
+        e.preventDefault();
+        openAlbumModalByName(target.textContent.trim());
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      var target = e.target;
+      if(target.classList.contains('mini-player-album-link') && (e.key === 'Enter' || e.key === ' ')){
+        e.preventDefault();
+        openAlbumModalByName(target.textContent.trim());
+      }
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        closeTrackModal();
+        closeAlbumModal();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
