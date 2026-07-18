@@ -1873,6 +1873,24 @@
       return m ? m[2] : '';
     }
 
+    function refreshDeezerUrls(){
+      var script = document.createElement('script');
+      script.src = 'https://api.deezer.com/search?q=Laufey&limit=50&output=jsonp&callback=handleDeezerBatch';
+      document.head.appendChild(script);
+    }
+    window.handleDeezerBatch = function(data){
+      if(!data || !data.data) return;
+      data.data.forEach(function(dt){
+        var dTitle = dt.title.toLowerCase().trim();
+        trackList.forEach(function(t){
+          var tTitle = trackName(t).toLowerCase().trim();
+          if(tTitle === dTitle || tTitle.indexOf(dTitle) >= 0 || dTitle.indexOf(tTitle) >= 0){
+            if(dt.preview) t.setAttribute('data-src', dt.preview);
+          }
+        });
+      });
+    }
+
     function setVinylPlaying(isPlaying, track){
       if(!vinylWrap) return;
       vinylWrap.classList.toggle('playing', isPlaying);
@@ -2193,7 +2211,32 @@
         setTopProgress(0, true);
       }).catch(function(err){
         console.error("Audio playback failed: ", err);
-        alert("Audio couldn't be loaded directly from the streaming API database. Please try again.");
+        // Try a fresh Deezer URL
+        if(!track._refreshing){
+          track._refreshing = true;
+          var tTitle = trackName(track).replace(/\s+/g, '+');
+          var cbName = 'deezerRetry_' + Math.random().toString(36).substr(2, 8);
+          window[cbName] = function(data){
+            delete window[cbName];
+            if(data && data.data && data.data.length > 0 && data.data[0].preview){
+              track.setAttribute('data-src', data.data[0].preview);
+              delete track._refreshing;
+              playTrack(track, opts);
+              return;
+            }
+            alert("Audio couldn't be loaded. Try again later.");
+          };
+          var script = document.createElement('script');
+          script.src = 'https://api.deezer.com/search?q=Laufey+' + tTitle + '&limit=5&output=jsonp&callback=' + cbName;
+          script.onerror = function(){
+            delete window[cbName];
+            delete track._refreshing;
+            alert("Audio couldn't be loaded. Try again later.");
+          };
+          document.head.appendChild(script);
+        } else {
+          alert("Audio couldn't be loaded directly from the streaming API database. Please try again.");
+        }
         setVinylPlaying(false, null);
       });
     }
@@ -3064,6 +3107,7 @@
       startTrivia();
     });
     startTrivia();
+    refreshDeezerUrls();
 
   })();
 </script>
